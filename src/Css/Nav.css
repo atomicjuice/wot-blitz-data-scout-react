@@ -1,30 +1,56 @@
-nav {
-  display: inline-flex;
+.navigate {
+  /* display: inline-flex; */
   white-space: nowrap;
   background: #37474F;
   float: left;
   position: fixed;
   top: 0;
+  height: 100vh;
+  display: grid;
+  grid-row-start: 2;
+  grid-template-rows: 10vh;
 }
-nav ul {
+
+ul {
   list-style: none;
   margin: 0;
   padding: 0;
   font-size: 26.5px;
 }
-/* Only stick if you can fit */
+
+.header {
+    position: fixed; 
+    width: 100%;
+    background: #37474F;
+    text-align: center;
+    font-size: 26.5px;
+    color: white;
+    height: 10vh;
+}
+
+a{
+  color: white;
+  display: block;
+  padding: 1.5rem 2rem;
+  text-decoration: none;
+  width: 16rem;
+}
+
+.b {
+  margin-top: 10vh;
+}
+
+a:hover{
+  background-color: rgba(36, 109, 34, 0.37);
+}
+
+/* nav ul li a.current {
+  background: black;
+} */
+
 @media (min-height: 300px) {
-  nav ul {
+  nav {
     position: sticky;
     top: 0;
   }
-}
-nav ul li a {
-  display: block;
-  padding: 1.5rem 2rem;
-  color: white;
-  text-decoration: none;
-}
-nav ul li a.current {
-  background: black;
 }

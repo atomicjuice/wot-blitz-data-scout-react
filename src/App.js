@@ -1,10 +1,10 @@
-// import './App.css';
 import {Route, BrowserRouter} from 'react-router-dom'
 import LandingPage from './Components/LandingPage'
 import DashBoard from './Components/DashBoard';
 import UserSearch from './Components/UserSearch';
 import NavBar from './Components/NavBar'
 import UserStatsContainer from './Containers/UserStatsContainer'
+import Header from './Components/Header'
 
 
 import React, { Component } from 'react';
@@ -36,6 +36,7 @@ class App extends Component {
       <div >
       <BrowserRouter>
       <NavBar/>
+      {/* <Header/> */}
       <Route exact path="/userstats" render={() => <UserStatsContainer/>}></Route>
       <Route exact path="/landingpage" render={() => <LandingPage/>}></Route>
       <Route exact path="/dashboard" render={() => <DashBoard/>}></Route>
