@@ -10,17 +10,26 @@ renderUserStats= () => {
   this.props.history.push('/userstats')
 }
 
-  handleSubmit = (e) => {
-    e.preventDefault()
-    fetch(`https://api.wotblitz.eu/wotb/account/list/?application_id=${process.env.REACT_APP_WOT_API_KEY}&search=${e.target[0].value}`)
+  fetchUserInfo = (id) => {
+    fetch(`https://api.wotblitz.eu/wotb/account/info/?application_id=${this.props.apikey}&account_id=${id}`)
     .then(resp => resp.json())
     .then(json => {
-      const user=json.data[0]
-      this.props.setCurrentUser(user.nickname,user.account_id)
-      localStorage.setItem('nickname', user.nickname)
-      localStorage.setItem('account_id', user.account_id)
-      console.log(json)
-      this.renderUserStats()
+      const nickname = json.data[id].nickname
+      const playerInfo = json.data[id]
+      localStorage.setItem('currentPlayer', JSON.stringify(playerInfo))
+      console.log()
+      this.props.setCurrentUser(nickname, id, playerInfo)
+    })
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault()
+    const name = e.target[0].value
+    fetch(`https://api.wotblitz.eu/wotb/account/list/?application_id=${this.props.apikey}&search=${name}`)
+    .then(resp => resp.json())
+    .then(json => {
+      const id = json.data[0].account_id
+      this.fetchUserInfo(id)
     })
   }
 
