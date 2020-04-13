@@ -12,19 +12,21 @@ import React, { Component } from 'react';
 import ClanSearch from './Components/ClanSearch';
 import ClanStats from './Components/ClanStats'
 // import ClanStatsContainer from './Containers/ClanStatsContainer'
+import PlayerList from './Components/PlayerList'
 import ClanList from './Components/ClanList';
 import UserStats from './Components/UserStats'
 
 class App extends Component {
 
   state = {
-    apikey:"f2e055f4250f8cb83b5ada0a424e3f8c",
+    apikey: "f2e055f4250f8cb83b5ada0a424e3f8c",
     currentUser: "KParadox",
     currentUserID: 529829705,
     currentPlayerInfo: null,
     playerToCompareNickname: "Crazy_AssasinjApple",
     playerToCompareId: 540130546,
     usersForComparison: [529829705, 540130546],
+    playerList: null,
     clanList: null,
     currentClanName: null,
     currentClanID: null,
@@ -36,7 +38,13 @@ class App extends Component {
 
   setClanList = (clans) => {
     this.setState({
-      clanList:clans
+      clanList: clans
+    })
+  }
+
+  setPlayerList = (players) => {
+    this.setState({
+      playerList: players
     })
   }
 
@@ -74,6 +82,17 @@ class App extends Component {
     })
   }
 
+  renderPlayerFromList = (name) => {
+    const id = this.state.playerList[name]
+    fetch(`https://api.wotblitz.eu/wotb/account/info/?application_id=${this.state.apikey}&account_id=${id}`)
+    .then(resp => resp.json())
+    .then(json => {
+      const info = json.data[id]
+      localStorage.setItem('currentPlayer', JSON.stringify(info))
+      this.setCurrentUser(name, id, info)
+    })
+  }
+
   renderClanFromList = (name) => {
     // console.log(this.state.clanList[name])
     const id = this.state.clanList[name]
@@ -96,15 +115,17 @@ class App extends Component {
         <NavBar />
         <Container >
           <Route exact path="/userstats" render={() => <UserStats
+            setPlayerList={this.setPlayerList}
             player={this.state.currentPlayerInfo}
             addToComparison={this.addToComparison}
           />}></Route>
-          <Route exact path="/clanlist" render={() => <ClanList renderClanFromList={this.renderClanFromList}/>}/>
-          <Route exact path="/clanstats" render={() => <ClanStats clan={this.state.currentClanInfo} setClanList={this.setClanList}/> }></Route>
-          <Route exact path="/clansearch" render={() => <ClanSearch setCurrentClan={this.setCurrentClan} apikey={this.state.apikey}/>}></Route>
+          <Route exact path="/playerlist" render={() => <PlayerList renderPlayerFromList={this.renderPlayerFromList}/>}/>
+          <Route exact path="/clanlist" render={() => <ClanList renderClanFromList={this.renderClanFromList} />} />
+          <Route exact path="/clanstats" render={() => <ClanStats clan={this.state.currentClanInfo} setClanList={this.setClanList} />}></Route>
+          <Route exact path="/clansearch" render={() => <ClanSearch setCurrentClan={this.setCurrentClan} apikey={this.state.apikey} />}></Route>
           <Route exact path="/landingpage" render={() => <LandingPage />}></Route>
           <Route exact path="/dashboard" render={() => <DashBoard />}></Route>
-          <Route exact path="/usersearch" render={() => <UserSearch setCurrentUser={this.setCurrentUser} apikey={this.state.apikey}/>}></Route>
+          <Route exact path="/usersearch" render={() => <UserSearch setCurrentUser={this.setCurrentUser} apikey={this.state.apikey} />}></Route>
           <Route exact path="/comparison" render={() => <ComparisonContainer players={this.state.usersForComparison} />}></Route>
           <Route exact path="/comparisonsearch" render={() => <ComparisonSearch setPlayerToCompare={this.setPlayerToCompare} />}></Route>
         </Container>
