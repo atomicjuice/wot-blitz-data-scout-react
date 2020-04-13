@@ -1,19 +1,10 @@
 import React, { Component } from 'react';
 import {withRouter} from 'react-router-dom'
-import '../Css/UserSearchStyle.css'
+import '../Css/SearchStyle.css'
 
 
 class UserSearch extends Component {
 
-  state = {
-    nickname:null
-  }
-
-  onChange = (e) => {
-    this.setState({
-
-    })
-  }
 
 renderUserStats= () => {
   this.props.history.push('/userstats')
@@ -33,14 +24,16 @@ renderUserStats= () => {
     })
   }
 
+  
 
   render() {
     return (
         <form onSubmit={this.handleSubmit} className='searchbar'>
+          <h1>Player Search</h1>
           <br/>
           <br/>
           <br/>
-          <input onChange={this.handleChange} name="nickname" type="text" placeholder="Nickname" ></input>
+          <input name="nickname" type="text" placeholder="Nickname" ></input>
           <br/>
           <br/> 
           <input type="submit" value="Scout"/>

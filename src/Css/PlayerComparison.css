@@ -1,0 +1,36 @@
+.split{
+  display:grid;
+  grid-template-columns: auto, auto ;
+  /* text-align: center; */
+}
+
+.player1{
+  text-align: right;
+}
+
+.player2{
+  text-align: left;
+}
+
+/* .graph{
+  position: relative;
+  height: 800px;
+  width: 400px;
+  background: #DDDDDD;
+  z-index: 3;
+} */
+
+.graph-wrapper{
+  text-align: -webkit-center;
+}
+
+.line{
+  position: absolute;
+  top: 0;
+  bottom:0;
+  width: 10px;
+  background: rgba(218, 7, 7, 0.1);
+  left: 10%;
+  text-align: -webkit-center;
+  z-index: 4;
+}
