@@ -114,11 +114,7 @@ class App extends Component {
       <div >
         <NavBar />
         <Container >
-          <Route exact path="/userstats" render={() => <UserStats
-            setPlayerList={this.setPlayerList}
-            player={this.state.currentPlayerInfo}
-            addToComparison={this.addToComparison}
-          />}></Route>
+          <Route exact path="/userstats" render={() => <UserStats setPlayerList={this.setPlayerList} player={this.state.currentPlayerInfo} addToComparison={this.addToComparison}/>}></Route>
           <Route exact path="/playerlist" render={() => <PlayerList renderPlayerFromList={this.renderPlayerFromList}/>}/>
           <Route exact path="/clanlist" render={() => <ClanList renderClanFromList={this.renderClanFromList} />} />
           <Route exact path="/clanstats" render={() => <ClanStats clan={this.state.currentClanInfo} setClanList={this.setClanList} />}></Route>
