@@ -3,8 +3,8 @@ import LandingPage from './Components/LandingPage'
 import UserSearch from './Components/UserSearch';
 import NavBar from './Components/NavBar'
 import Container from '@material-ui/core/Container';
-import ComparisonSearch from './Components/ComparisonSearch'
-import Comparison from './Components/Comparison'
+import PlayerComparisonSearch from './Components/PlayerComparisonSearch'
+import PlayerComparison from './Components/PlayerComparison'
 import { withRouter } from 'react-router-dom'
 import React, { Component } from 'react';
 import ClanSearch from './Components/ClanSearch';
@@ -18,14 +18,13 @@ class App extends Component {
 
   state = {
     apikey: "f2e055f4250f8cb83b5ada0a424e3f8c",
-    currentUser: "KParadox",
-    currentUserID: 529829705,
+    currentUser: null,
+    currentUserID: null,
     currentPlayerInfo: null,
     playerToCompareInfo: null,
-    playerToCompareNickname: "Crazy_AssasinjApple",
+    playerToCompareNickname: null,
     playerOneID: null,
     playerTwoID: null,
-    // usersForComparison: [],
     playerList: null,
     clanList: null,
     currentClanName: null,
@@ -62,7 +61,6 @@ class App extends Component {
       currentUser: nickname,
       currentUserID: ID,
       currentPlayerInfo: info,
-      // usersForComparison: [...this.state.usersForComparison, ID]
     })
     this.props.history.push('/userstats')
   }
@@ -79,7 +77,7 @@ class App extends Component {
       this.setState({
         playerToCompareInfo: info
       })
-      this.props.history.push('/comparison')
+      this.props.history.push('/PlayerComparison')
     })
     
   }
@@ -88,7 +86,7 @@ class App extends Component {
     this.setState({
       playerOneID: id
     })
-    this.props.history.push('/comparisonsearch')
+    this.props.history.push('/PlayerComparisonSearch')
   }
 
   renderPlayerFromList = (name) => {
@@ -130,8 +128,8 @@ class App extends Component {
           <Route exact path="/playerlist" render={() => <PlayerList renderPlayerFromList={this.renderPlayerFromList} />} />
           <Route exact path="/clanlist" render={() => <ClanList renderClanFromList={this.renderClanFromList} />} />
           <Route exact path="/landingpage" render={() => <LandingPage />}></Route>
-          <Route exact path="/comparison" render={() => <Comparison currentPlayerInfo={this.state.currentPlayerInfo} playerToCompareInfo={this.state.playerToCompareInfo} />}></Route>
-          <Route exact path="/comparisonsearch" render={() => <ComparisonSearch setPlayerTwoComparisonID={this.setPlayerTwoComparisonID} apikey={this.state.apikey}/>}></Route>
+          <Route exact path="/PlayerComparison" render={() => <PlayerComparison currentPlayerInfo={this.state.currentPlayerInfo} playerToCompareInfo={this.state.playerToCompareInfo} />}></Route>
+          <Route exact path="/PlayerComparisonSearch" render={() => <PlayerComparisonSearch setPlayerTwoComparisonID={this.setPlayerTwoComparisonID} apikey={this.state.apikey}/>}></Route>
         </Container>
       </div>
     );

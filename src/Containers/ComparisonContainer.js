@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Comparison from '../Components/Comparison'
+import Comparison from '../Components/PlayerComparison'
 
 class ComparisonContainer extends Component {
 

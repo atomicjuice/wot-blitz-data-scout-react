@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
 import '../Css/PlayerComparison.css'
 
-class Comparison extends Component {
+class PlayerComparison extends Component {
 
   state = {
+    playerOne: this.props.currentPlayerInfo.statistics.all,
     playerTwo: this.props.playerToCompareInfo.statistics.all
   }
 
   render() {
     const playerOneNickname = this.props.currentPlayerInfo.nickname
-    const playerOne = this.props.currentPlayerInfo.statistics.all
+    const playerOne = this.state.playerOne
     const playerTwoNickname = this.props.playerToCompareInfo.nickname
     const playerTwo = this.state.playerTwo
     return (      
       <div className='split'>
 
-        {/* {console.log(playerTwo)} */}
-    {/* <h1>{playerTwo.nickname}</h1> */}
+
       <h1>Compare these players</h1>
       <div className='player1'>
         <h1>{playerOneNickname}</h1> 
@@ -50,4 +50,4 @@ class Comparison extends Component {
   }
 }
 
-export default Comparison;
+export default PlayerComparison;
