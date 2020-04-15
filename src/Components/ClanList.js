@@ -19,10 +19,8 @@ class ClanList extends Component {
   }
 
   render() {
-
-    // const list2 = 
     return (
-      <div>
+      <div className='clanList'>
         {this.checkList()}
       </div>
     );

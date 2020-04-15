@@ -19,7 +19,7 @@ class PlayerList extends Component {
   render() {
 
     return (
-      <div>
+      <div className='playerList'>
         {this.checkList()}
       </div>
     );

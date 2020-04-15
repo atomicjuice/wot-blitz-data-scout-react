@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom'
-import '../Css/UserStatsStyle.css'
+import '../Css/StatsStyle.css'
 
 class UserStats extends Component {
 
@@ -37,7 +37,7 @@ class UserStats extends Component {
     const info = player.statistics.all
     const accuracy = info.hits / info.shots * 100
     return (
-      <div>
+      <div className='playerStats'>
         <h1>Player name: {nickname}</h1>
         <br></br>
         <h2>Battles: {info.battles}</h2>
@@ -53,6 +53,7 @@ class UserStats extends Component {
         <h2>Accuracy: {accuracy.toFixed(2)}%</h2>
         <br></br>
         <button onClick={() => this.addToPlayerList(nickname, player.account_id)}>+ Add To Player List</button>
+        <br></br>
         <br></br>
         <button onClick={() => this.setPlayerOneComparisonID(player.account_id)}>+ Compare With Another User</button>
       </div>

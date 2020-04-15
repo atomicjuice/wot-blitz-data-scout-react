@@ -5,11 +5,12 @@
 }
 
 .player1{
+  margin-top: 15vh;
   text-align: right;
 }
 
 .player2{
-  text-align: left;
+  text-align: right;
 }
 
 /* .graph{

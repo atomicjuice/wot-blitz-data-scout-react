@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import '../Css/StatsStyle.css'
+
 
 class ClanStats extends Component {
 
@@ -31,7 +33,7 @@ class ClanStats extends Component {
   render() {
     const clan = this.state.clan
     return (
-      <div>
+      <div className='clanStats'>
         <h1>Name: {clan.name}</h1>
         <br />
         <h2>Founder Name: {clan.creator_name}</h2>
@@ -47,12 +49,13 @@ class ClanStats extends Component {
         <h2>Minimum win/loss ratio needed to join: {clan.recruiting_options.wins_ratio} </h2>
         <br />
         {/* <button className="comparebylist" onClick={addToComparison}>+ Compare Another Clan From Clan List</button> */}
-        <br />
-        <br />
+        {/* <br />
+        <br /> */}
         {/* <button className="comparebysearch" onClick={addToComparison}>+ Compare Another Clan By Search</button> */}
-        <br />
-        <br />
+        {/* <br />
+        <br /> */}
         <button className="addtoclanlist" onClick={() => this.addToClanList(clan.name, clan.clan_id)}>+ Add To Clan List </button>
+        <br></br>
         <br></br>
         <button onClick={() => this.setClanOneComparisonID(clan.clan_id)}>+ Compare With Another Clan</button>
       </div>

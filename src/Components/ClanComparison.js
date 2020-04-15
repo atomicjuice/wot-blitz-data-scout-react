@@ -31,6 +31,8 @@ class ClanComparison extends Component {
           <h2>Minimum win/loss ratio needed to join: {clanOne.recruiting_options.wins_ratio} </h2>
           <br />
         </div>
+        <br/>
+        <br/>
         <div className='clanTwo'>
           <h1>Name: {clanTwo.name}</h1>
           <br />

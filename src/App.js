@@ -112,7 +112,9 @@ class App extends Component {
   }
 
   renderPlayerFromList = (name) => {
-    const id = this.state.playerList[name]
+    const playerListFromLocalStorage = localStorage.getItem('playerList')
+    const playerListParsed = JSON.parse(playerListFromLocalStorage)
+    const id = playerListParsed[name]
     fetch(`https://api.wotblitz.eu/wotb/account/info/?application_id=${this.state.apikey}&account_id=${id}`)
       .then(resp => resp.json())
       .then(json => {
@@ -125,7 +127,7 @@ class App extends Component {
   renderClanFromList = (name) => {
     const clanListFromLocalStorage = localStorage.getItem('clanList')
     const clanListParsed = JSON.parse(clanListFromLocalStorage)
-    const id = this.state.clanList[name]
+    const id = clanListParsed[name]
     console.log([name])
     fetch(`https://api.wotblitz.eu/wotb/clans/info/?application_id=${this.state.apikey}&clan_id=${id}`)
       .then(resp => resp.json())

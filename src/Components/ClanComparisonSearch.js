@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import '../Css/SearchStyle.css'
+
 
 
 class ClanComparisonSearch extends Component {

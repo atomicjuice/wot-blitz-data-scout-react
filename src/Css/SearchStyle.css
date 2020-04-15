@@ -1,9 +1,14 @@
-.comparePlayerSearchbar{
-  margin-top: 10vh;
+.searchbar{
+  margin-top: 15vh;
   text-align: center;
 }
 
-.compareClanSearchBar{
-  margin-top: 10vh;
+.comparePlayerSearchbar{
+  margin-top: 15vh;
+  text-align: center;
+}
+
+.compareClanSearchbar{
+  margin-top: 15vh;
   text-align: center;
 }
