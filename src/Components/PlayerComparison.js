@@ -17,7 +17,7 @@ class PlayerComparison extends Component {
       <div className='split'>
 
 
-      <h1>Compare these players</h1>
+      {/* <h1>player Comparison</h1> */}
       <div className='player1'>
         <h1>{playerOneNickname}</h1> 
         <br/>

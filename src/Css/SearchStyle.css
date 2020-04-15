@@ -1,4 +1,9 @@
-.searchbar{
+.comparePlayerSearchbar{
+  margin-top: 10vh;
+  text-align: center;
+}
+
+.compareClanSearchBar{
   margin-top: 10vh;
   text-align: center;
 }

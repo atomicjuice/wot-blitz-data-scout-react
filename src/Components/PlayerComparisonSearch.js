@@ -16,7 +16,7 @@ class ComparisonSearch extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit} className='searchbar'>
+      <form onSubmit={this.handleSubmit} className='comparePlayerSearchbar'>
         <h1>Enter Player To Compare With</h1>
         <br />
         <br />

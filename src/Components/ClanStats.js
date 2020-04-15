@@ -26,6 +26,8 @@ class ClanStats extends Component {
     }
   }
 
+  setClanOneComparisonID = this.props.setClanOneComparisonID
+
   render() {
     const clan = this.state.clan
     return (
@@ -51,6 +53,8 @@ class ClanStats extends Component {
         <br />
         <br />
         <button className="addtoclanlist" onClick={() => this.addToClanList(clan.name, clan.clan_id)}>+ Add To Clan List </button>
+        <br></br>
+        <button onClick={() => this.setClanOneComparisonID(clan.clan_id)}>+ Compare With Another Clan</button>
       </div>
     );
   }

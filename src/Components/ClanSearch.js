@@ -23,9 +23,7 @@ class ClanSearch extends Component {
         this.setState({
           clan: info
         })
-        console.log(this.state)
         this.props.setCurrentClan(name, id, info)
-        // this.renderClanStats()
       })
   }
 
@@ -40,7 +38,6 @@ class ClanSearch extends Component {
           id: ID
         })
         this.fetchClanInfo(name, ID)
-        // this.renderClanStats()
       })
   }
 
