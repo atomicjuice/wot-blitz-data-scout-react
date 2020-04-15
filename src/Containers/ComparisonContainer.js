@@ -3,9 +3,11 @@ import Comparison from '../Components/Comparison'
 
 class ComparisonContainer extends Component {
 
+  apikey = this.props.apikey
+
   state = {
-    playerOneID: this.props.players[0],
-    playerTwoID: this.props.players[1],
+    playerOneID: this.props.playerOneID,
+    playerTwoID: this.props.playerTwoID,
     playerOneInfo: {},
     playerTwoInfo: {}
   }

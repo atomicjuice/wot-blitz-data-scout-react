@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 
 class ClanStats extends Component {
+
+  clanLocalStorage = (localStorage.getItem('currentClan'))
+  clanParsed = JSON.parse(this.clanLocalStorage)
+
   state = {
-    clan:this.props.clan
+    clan: !this.props.clan ? this.clanParsed: this.props.clan
   }
 
   addToClanList = (name, id) => {

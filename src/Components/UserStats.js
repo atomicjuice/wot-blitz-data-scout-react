@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom'
 import '../Css/UserStatsStyle.css'
 
 class UserStats extends Component {
@@ -7,8 +8,7 @@ class UserStats extends Component {
   playerParsed = JSON.parse(this.playerLocalStorage)
 
   state = {
-    // player: this.props.player
-    player: this.playerParsed
+    player: !this.props.player ? this.playerParsed:this.props.player
   }
 
   addToPlayerList = (name, id) => {
@@ -28,6 +28,8 @@ class UserStats extends Component {
     }
   }
 
+  setPlayerOneComparisonID = this.props.setPlayerOneComparisonID
+
 
   render() {
     const player = this.state.player
@@ -36,7 +38,6 @@ class UserStats extends Component {
     const accuracy = info.hits / info.shots * 100
     return (
       <div>
-        {console.log(player.account_id)}
         <h1>Player name: {nickname}</h1>
         <br></br>
         <h2>Battles: {info.battles}</h2>
@@ -52,9 +53,11 @@ class UserStats extends Component {
         <h2>Accuracy: {accuracy.toFixed(2)}%</h2>
         <br></br>
         <button onClick={() => this.addToPlayerList(nickname, player.account_id)}>+ Add To Player List</button>
+        <br></br>
+        <button onClick={() => this.setPlayerOneComparisonID(player.account_id)}>+ Compare With Another User</button>
       </div>
     );
   }
 }
 
-export default UserStats;
+export default withRouter(UserStats);

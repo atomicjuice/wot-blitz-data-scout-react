@@ -3,46 +3,47 @@ import '../Css/PlayerComparison.css'
 
 class Comparison extends Component {
 
-  Line = () => {
-    return(
-      <div classname='line'></div>
-    )
+  state = {
+    playerTwo: this.props.playerToCompareInfo.statistics.all
   }
 
   render() {
+    const playerOneNickname = this.props.currentPlayerInfo.nickname
+    const playerOne = this.props.currentPlayerInfo.statistics.all
+    const playerTwoNickname = this.props.playerToCompareInfo.nickname
+    const playerTwo = this.state.playerTwo
     return (      
       <div className='split'>
+
+        {/* {console.log(playerTwo)} */}
+    {/* <h1>{playerTwo.nickname}</h1> */}
       <h1>Compare these players</h1>
       <div className='player1'>
-        <h1>{this.props.playerOne.nickname}</h1> 
+        <h1>{playerOneNickname}</h1> 
         <br/>
-        battles:{this.props.playerOne.battles}
+        battles:{playerOne.battles}
         <br/>
-        wins:{this.props.playerOne.wins}
+        wins:{playerOne.wins}
         <br/>
-        losses:{this.props.playerOne.losses}
+        losses:{playerOne.losses}
         <br/>
-        destroyed:{this.props.playerOne.frags}
+        destroyed:{playerOne.frags}
         <br/>
-        won and survived:{this.props.playerOne.win_and_survived}
+        won and survived:{playerOne.win_and_survived}
       </div>
-      <div className='graph-wrapper'>
-        <div className='graph'>
-          <this.Line/>
-        </div>
-      </div>
+
       <div className='player2'>
-        <h1>{this.props.playerTwo.nickname}</h1>
+        <h1>Name: {playerTwoNickname}</h1>
         <br/>
-        battles:{this.props.playerTwo.battles}
+        battles:{playerTwo.battles}
         <br/>
-        wins:{this.props.playerTwo.wins}
+        wins:{playerTwo.wins}
         <br/>
-        losses:{this.props.playerTwo.losses}
+        losses:{playerTwo.losses}
         <br/>
-        destroyed:{this.props.playerTwo.frags}
+        destroyed:{playerTwo.frags}
         <br/>
-        won and survived:{this.props.playerTwo.win_and_survived}
+        won and survived:{playerTwo.win_and_survived}
       </div>
     </div>
     );
