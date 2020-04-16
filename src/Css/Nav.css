@@ -45,15 +45,16 @@ ul {
 }
 
 .header {
-    position: fixed; 
-    width: 100%;
-    background: #263158;
-    text-align: center;
-    font-size: 26.5px;
-    color: white;
-    height: 10vh;
-    z-index: 1;
-    /* border-bottom: solid 1px grey; */
+  padding-top: 5px;
+  position: fixed; 
+  width: 100%;
+  background: #263158;
+  text-align: center;
+  font-size: 26.5px;
+  color: white;
+  height: 10vh;
+  z-index: 1;
+  /* border-bottom: solid 1px grey; */
 }
 
 a{

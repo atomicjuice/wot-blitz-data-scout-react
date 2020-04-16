@@ -3,6 +3,8 @@ import '../Css/PlayerComparison.css'
 
 class PlayerComparison extends Component {
 
+  // playerTwofromlocalStorage = 
+
   state = {
     playerOne: this.props.currentPlayerInfo.statistics.all,
     playerTwo: this.props.playerToCompareInfo.statistics.all
@@ -13,15 +15,18 @@ class PlayerComparison extends Component {
     const playerOne = this.state.playerOne
     const playerTwoNickname = this.props.playerToCompareInfo.nickname
     const playerTwo = this.state.playerTwo
+    const playerOneAccuracy = playerOne.hits / playerOne.shots * 100
+    const playerTwoAccuracy = playerTwo.hits / playerTwo.shots * 100
     return (      
       <div className='split'>
 
 
       {/* <h1>player Comparison</h1> */}
-      <div className='player1'>
-        <h1>{playerOneNickname}</h1> 
+      <div className='player1' >
+        <h1 style={{color: 'green'}}>{playerOneNickname}</h1> 
         <br/>
-        battles:{playerOne.battles}
+        battles:{playerOne.battles} 
+        {/* {playerOne.battles>playerTwo.battles ?  } */}
         <br/>
         wins:{playerOne.wins}
         <br/>
@@ -30,10 +35,12 @@ class PlayerComparison extends Component {
         destroyed:{playerOne.frags}
         <br/>
         won and survived:{playerOne.win_and_survived}
+        <br/>
+        accuracy:{playerOneAccuracy.toFixed(2)}%
       </div>
 
       <div className='player2'>
-        <h1>Name: {playerTwoNickname}</h1>
+        <h1>{playerTwoNickname}</h1>
         <br/>
         battles:{playerTwo.battles}
         <br/>
@@ -44,6 +51,8 @@ class PlayerComparison extends Component {
         destroyed:{playerTwo.frags}
         <br/>
         won and survived:{playerTwo.win_and_survived}
+        <br/>
+        accuracy:{playerTwoAccuracy.toFixed(2)}%
       </div>
     </div>
     );

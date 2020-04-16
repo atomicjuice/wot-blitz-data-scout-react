@@ -14,6 +14,7 @@ import ClanList from './Components/ClanList';
 import UserStats from './Components/UserStats'
 import ClanComparisonSearch from './Components/ClanComparisonSearch'
 import ClanComparison from './Components/ClanComparison'
+import './App.css'
 
 
 class App extends Component {
@@ -140,7 +141,6 @@ class App extends Component {
   }
 
   render() {
-    // console.log("APP RENDER", this.props.location)
     return (
       <div >
         <NavBar />
