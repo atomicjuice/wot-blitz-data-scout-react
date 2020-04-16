@@ -80,6 +80,7 @@ class App extends Component {
         this.setState({
           playerToCompareInfo: info
         })
+        localStorage.setItem('comparisonPlayer', JSON.stringify(info))
         this.props.history.push('/PlayerComparison')
       })
   }
