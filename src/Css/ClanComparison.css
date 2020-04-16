@@ -1,8 +1,29 @@
 .clanOne{
   margin-top: 15vh;
   text-align: right;
+
 }
 
 .clanTwo{
   text-align: right;
+}
+
+.clanOneTitle{
+  color:blue
+}
+
+.clanTwoTitle{
+  color: orange
+}
+
+.green{
+  color: green
+}
+
+.red{
+  color: red
+}
+
+.motto{
+  color:blueviolet
 }

@@ -38,33 +38,34 @@ class PlayerComparison extends Component {
         <div className='player1' >
           <h1 style={{ color: 'blue' }}>{playerOneNickname}</h1>
           <br />
-          <p>battles:{playerOne.battles}</p>
-          {/* {playerOne.battles>playerTwo.battles ?  } */}
-          wins:{playerOne.wins}
-          <br />
-          losses:{playerOne.losses}
-          <br />
-          destroyed:{playerOne.frags}
-          <br />
-          won and survived:{playerOne.win_and_survived}
-          <br />
-          accuracy:{playerOneAccuracy.toFixed(2)}%
+          <p className={playerOne.battles > playerTwo.battles ? 'green' : 'red'}>battles:{playerOne.battles}</p>
+          <p className={playerOne.wins > playerTwo.wins ? 'green' : 'red'}>wins:{playerOne.wins}</p>
+          <p className={playerOne.battles > playerTwo.battles ? 'green' : 'red'}>losses:{playerOne.losses}</p>
+          <p className={playerOne.battles > playerTwo.battles ? 'green' : 'red'}>destroyed:{playerOne.frags}</p>
+          <p className={playerOne.battles > playerTwo.battles ? 'green' : 'red'}>won and survived:{playerOne.win_and_survived}</p>
+          <p className={playerOneAccuracy > playerTwoAccuracy ? 'green' : 'red'}>accuracy:{playerOneAccuracy.toFixed(2)}%</p>
       </div>
 
         <div className='player2'>
           <h1 style={{ color: 'orange' }}>{playerTwoNickname}</h1>
           <br />
-          battles:{playerTwo.battles}
+          <p className={playerOne.battles < playerTwo.battles ? 'green' : 'red'}>battles:{playerTwo.battles}</p>
+          <p className={playerOne.wins < playerTwo.wins ? 'green' : 'red'}>wins:{playerTwo.wins}</p>
+          <p className={playerOne.battles < playerTwo.battles ? 'green' : 'red'}>losses:{playerTwo.losses}</p>
+          <p className={playerOne.battles < playerTwo.battles ? 'green' : 'red'}>destroyed:{playerTwo.frags}</p>
+          <p className={playerOne.battles < playerTwo.battles ? 'green' : 'red'}>won and survived:{playerTwo.win_and_survived}</p>
+          <p className={playerOneAccuracy < playerTwoAccuracy ? 'green' : 'red'}>accuracy:{playerTwoAccuracy.toFixed(2)}%</p>
+      
           <br />
-          wins:{playerTwo.wins}
+          
           <br />
-          losses:{playerTwo.losses}
+          
           <br />
-          destroyed:{playerTwo.frags}
+          
           <br />
-          won and survived:{playerTwo.win_and_survived}
+          
           <br />
-          accuracy:{playerTwoAccuracy.toFixed(2)}%
+          
       </div>
       </div>
     );

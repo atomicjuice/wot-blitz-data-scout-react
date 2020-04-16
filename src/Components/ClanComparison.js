@@ -3,9 +3,21 @@ import '../Css/ClanComparison.css'
 
 class ClanComparison extends Component {
 
+  ClanOneInfo = () => {
+    const clanOneLocalStorage = localStorage.getItem('currentClan')
+    const clanOneParsed = JSON.parse(clanOneLocalStorage)
+    return(clanOneParsed)
+  }
+
+  ClanTwoInfo = () => {
+    const clanTwoLocalStorage = localStorage.getItem('comparisonClan')
+    const clanTwoParsed = JSON.parse(clanTwoLocalStorage)
+    return(clanTwoParsed)
+  }
+
   state = {
-    clanOne: this.props.currentClanInfo,
-    clanTwo: this.props.clanTocompareinfo
+    clanOne: this.ClanOneInfo(),
+    clanTwo: this.ClanTwoInfo()
   }
 
 
@@ -16,38 +28,25 @@ class ClanComparison extends Component {
       <div>
         {console.log(clanTwo)}
         <div className='clanOne'>
-          <h1>Name: {clanOne.name}</h1>
-          <br />
+          <h1 className='clanOneTitle'>{clanOne.name}</h1>
+          <h2 className='motto'>Motto: {clanOne.motto}</h2>
           <h2>Founder Name: {clanOne.creator_name}</h2>
-          <br />
-          <h2>Members Count: {clanOne.members_count}</h2>
-          <br />
-          <h2>Motto: {clanOne.motto} </h2>
-          <br />
-          <h2>Minimum tier vehicle to join: {clanOne.recruiting_options.vehicles_level}</h2>
-          <br />
-          <h2>Battles before you can join: {clanOne.recruiting_options.battles}</h2>
-          <br />
-          <h2>Minimum win/loss ratio needed to join: {clanOne.recruiting_options.wins_ratio} </h2>
-          <br />
+          <p className={clanOne.members_count > clanTwo.members_count ? 'green' : 'red'}>Members Count: {clanOne.members_count}</p>
+          <p className={clanOne.recruiting_options.vehicles_level > clanTwo.recruiting_options.vehicles_level ? 'green' : 'red'}>Minimum tier vehicle to join: {clanOne.recruiting_options.vehicles_level}</p>
+          <p className={clanOne.recruiting_options.battles > clanTwo.recruiting_options.battles ? 'green' : 'red'}>Battles before you can join: {clanOne.recruiting_options.battles}</p>
+          <p className={clanOne.recruiting_options.wins_ratio >= clanTwo.recruiting_options.wins_ratio ? 'green' : 'red'}>Minimum win/loss ratio needed to join: {clanOne.recruiting_options.wins_ratio}</p>
         </div>
         <br/>
+        ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         <br/>
         <div className='clanTwo'>
-          <h1>Name: {clanTwo.name}</h1>
-          <br />
+        <h1 className='clanTwoTitle'>{clanTwo.name}</h1>
+        <h2 className='motto'>Motto: {clanTwo.motto}</h2>
           <h2>Founder Name: {clanTwo.creator_name}</h2>
-          <br />
-          <h2>Members Count: {clanTwo.members_count}</h2>
-          <br />
-          <h2>Motto: {clanTwo.motto} </h2>
-          <br />
-          <h2>Minimum tier vehicle to join: {clanTwo.recruiting_options.vehicles_level}</h2>
-          <br />
-          <h2>Battles before you can join: {clanTwo.recruiting_options.battles}</h2>
-          <br />
-          <h2>Minimum win/loss ratio needed to join: {clanTwo.recruiting_options.wins_ratio} </h2>
-          <br />
+          <p className={clanOne.members_count < clanTwo.members_count ? 'green' : 'red'}>Members Count: {clanTwo.members_count}</p>
+          <p className={clanOne.recruiting_options.vehicles_level < clanTwo.recruiting_options.vehicles_level ? 'green' : 'red'}>Minimum tier vehicle to join: {clanTwo.recruiting_options.vehicles_level}</p>
+          <p className={clanOne.recruiting_options.battles < clanTwo.recruiting_options.battles ? 'green' : 'red'}>Battles before you can join: {clanTwo.recruiting_options.battles}</p>
+          <p className={clanOne.recruiting_options.wins_ratio <= clanTwo.recruiting_options.wins_ratio ? 'green' : 'red'}>Minimum win/loss ratio needed to join: {clanTwo.recruiting_options.wins_ratio}</p>
         </div>
       </div>
     )
