@@ -143,7 +143,8 @@ class App extends Component {
 
   render() {
     return (
-      <div >
+      <div className='container'>
+        
         <NavBar />
         <Container >
           <Route exact path="/usersearch" render={() => <UserSearch setCurrentUser={this.setCurrentUser} apikey={this.state.apikey} />}></Route>

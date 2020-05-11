@@ -37,16 +37,18 @@ class UserSearch extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit} className='searchbar'>
-        <h1>Player Search</h1>
-        <br />
-        <br />
-        <br />
-        <input name="nickname" type="text" placeholder="Nickname" ></input>
-        <br />
-        <br />
-        <input type="submit" value="Scout" />
-      </form>
+      <div className='userSearch'>
+              <form onSubmit={this.handleSubmit} className='searchbar'>
+              <h1>Player Search</h1>
+              <br />
+              <br />
+              <br />
+              <input name="nickname" type="text" placeholder="Nickname" ></input>
+              <br />
+              <br />
+              <input type="submit" value="Scout" />
+            </form>/>
+      </div>
     );
   }
 }
