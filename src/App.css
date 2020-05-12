@@ -12,6 +12,14 @@
   grid-template-columns: [navbar] 15vw auto 20vw 20vw 20vw;
 }
 
+.mainBackground{
+  background-image: url(https://images2.alphacoders.com/711/711084.jpg);
+  background-color: #cccccc;
+  background-size: cover;
+  background-blend-mode: multiply;
+  height: 100vh;
+  width: 100vw;
+}
 
 
 

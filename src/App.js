@@ -143,10 +143,9 @@ class App extends Component {
 
   render() {
     return (
-      <div className='container'>
+      <div className='container mainBackground'>
         
         <NavBar />
-        <Container >
           <Route exact path="/usersearch" render={() => <UserSearch setCurrentUser={this.setCurrentUser} apikey={this.state.apikey} />}></Route>
           <Route exact path="/clansearch" render={() => <ClanSearch setCurrentClan={this.setCurrentClan} apikey={this.state.apikey} />}></Route>
           <Route exact path="/userstats" render={() => <UserStats setPlayerList={this.setPlayerList} player={this.state.currentPlayerInfo} setPlayerOneComparisonID={this.setPlayerOneComparisonID} />}></Route>
@@ -158,7 +157,7 @@ class App extends Component {
           <Route exact path="/playerComparisonSearch" render={() => <PlayerComparisonSearch setPlayerTwoComparisonID={this.setPlayerTwoComparisonID} apikey={this.state.apikey} />}></Route>
           <Route exact path="/clancomparisonsearch" render={() => <ClanComparisonSearch apikey={this.state.apikey} setClanTwoComparisonID={this.setClanTwoComparisonID} />} />
           <Route exact path="/clancomparison" render={() => <ClanComparison currentClanInfo={this.state.currentClanInfo} clanTocompareinfo={this.state.clanTocompareinfo} />}></Route>
-        </Container>
+
       </div>
     );
   }
