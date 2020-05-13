@@ -2,7 +2,7 @@ import { Route } from 'react-router-dom'
 import LandingPage from './Components/LandingPage'
 import UserSearch from './Components/UserSearch';
 import NavBar from './Components/NavBar'
-import Container from '@material-ui/core/Container';
+// import Container from '@material-ui/core/Container';
 import PlayerComparisonSearch from './Components/PlayerComparisonSearch'
 import PlayerComparison from './Components/PlayerComparison'
 import { withRouter } from 'react-router-dom'

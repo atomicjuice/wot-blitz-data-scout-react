@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom'
 import '../Css/SearchStyle.css'
+import '../App.css'
 
 
 class UserSearch extends Component {
@@ -37,7 +38,8 @@ class UserSearch extends Component {
 
   render() {
     return (
-      <div className='userSearch'>
+      <div className='card'>
+              <div className='userSearch'>
               <form onSubmit={this.handleSubmit} className='searchbar'>
               <h1>Player Search</h1>
               <br />
@@ -49,6 +51,8 @@ class UserSearch extends Component {
               <input type="submit" value="Scout" />
             </form>/>
       </div>
+      </div>
+
     );
   }
 }
