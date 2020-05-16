@@ -55,8 +55,6 @@ class PlayerComparison extends Component {
           <p className={playerOne.battles < playerTwo.battles ? 'green' : 'red'}>destroyed:{playerTwo.frags}</p>
           <p className={playerOne.battles < playerTwo.battles ? 'green' : 'red'}>won and survived:{playerTwo.win_and_survived}</p>
           <p className={playerOneAccuracy < playerTwoAccuracy ? 'green' : 'red'}>accuracy:{playerTwoAccuracy.toFixed(2)}%</p>
-      
-          <br />
           
           <br />
           
