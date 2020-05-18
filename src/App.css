@@ -10,11 +10,13 @@
 .container{
   display: grid;
   grid-template-columns: [navbar] 15vw auto 20vw [here] 20vw 20vw;
+  grid-template-rows: 10vh auto auto;
+  /* grid-template-columns: 30vw auto 30vw */
 }
 
-.userSearch {
+/* .card {
   grid-column-start: [here];
-}
+} */
 
 .mainBackground{
   background-image: url(https://images2.alphacoders.com/711/711084.jpg);

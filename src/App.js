@@ -1,5 +1,4 @@
 import { Route } from 'react-router-dom'
-import LandingPage from './Components/LandingPage'
 import UserSearch from './Components/UserSearch';
 import NavBar from './Components/NavBar'
 // import Container from '@material-ui/core/Container';
@@ -152,7 +151,6 @@ class App extends Component {
           <Route exact path="/clanstats" render={() => <ClanStats clan={this.state.currentClanInfo} setClanList={this.setClanList} setClanOneComparisonID={this.setClanOneComparisonID} />}></Route>
           <Route exact path="/playerlist" render={() => <PlayerList renderPlayerFromList={this.renderPlayerFromList} />} />
           <Route exact path="/clanlist" render={() => <ClanList renderClanFromList={this.renderClanFromList} />} />
-          <Route exact path="/landingpage" render={() => <LandingPage />}></Route>
           <Route exact path="/playerComparison" render={() => <PlayerComparison currentPlayerInfo={this.state.currentPlayerInfo} playerToCompareInfo={this.state.playerToCompareInfo} />}></Route>
           <Route exact path="/playerComparisonSearch" render={() => <PlayerComparisonSearch setPlayerTwoComparisonID={this.setPlayerTwoComparisonID} apikey={this.state.apikey} />}></Route>
           <Route exact path="/clancomparisonsearch" render={() => <ClanComparisonSearch apikey={this.state.apikey} setClanTwoComparisonID={this.setClanTwoComparisonID} />} />
