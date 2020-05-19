@@ -142,7 +142,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className='container mainBackground'>
+      <div style= {{backgroundImage: "url('https://images2.alphacoders.com/711/711084.jpg')"}} className='container mainBackground'>
         
         <NavBar />
           <Route exact path="/usersearch" render={() => <UserSearch setCurrentUser={this.setCurrentUser} apikey={this.state.apikey} />}></Route>

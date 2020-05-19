@@ -27,7 +27,7 @@ a:hover{
 .navigate {
   /* display: inline-flex; */
   display: grid;
-  grid-column-start: 4;
+  /* grid-column-start: 4; */
   white-space: nowrap;
   background: #37474F;
   float: left;

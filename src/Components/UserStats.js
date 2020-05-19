@@ -38,24 +38,43 @@ class UserStats extends Component {
     const accuracy = info.hits / info.shots * 100
     return (
       <div className='playerStats'>
-        <h1>Player name: {nickname}</h1>
+        <p>Player name: {nickname}</p>
         <br></br>
-        <h2>Battles: {info.battles}</h2>
+        <p>Battles: {info.battles}</p>
         <br></br>
-        <h2>Won: {info.wins}</h2>
+        <p>Won: {info.wins}</p>
         <br></br>
-        <h2>Losses: {info.losses}</h2>
+        <p>Losses: {info.losses}</p>
         <br></br>
-        <h2>Won And Survived: {info.win_and_survived}</h2>
+        <p>Won And Survived: {info.win_and_survived}</p>
         <br></br>
-        <h2>Destroyed: {info.frags}</h2>
+        <p>Destroyed: {info.frags}</p>
         <br></br>
-        <h2>Accuracy: {accuracy.toFixed(2)}%</h2>
+        <p>Accuracy: {accuracy.toFixed(2)}%</p>
         <br></br>
         <button onClick={() => this.addToPlayerList(nickname, player.account_id)}>+ Add To Player List</button>
         <br></br>
         <br></br>
         <button onClick={() => this.setPlayerOneComparisonID(player.account_id)}>+ Compare With Another User</button>
+
+
+        <p>Player name: {nickname}</p>
+        <br></br>
+        <p>Battles: {info.battles}</p>
+        <br></br>
+        <p>Won: {info.wins}</p>
+        <br></br>
+        <p>Losses: {info.losses}</p>
+        <br></br>
+        <p>Won And Survived: {info.win_and_survived}</p>
+        <br></br>
+        <p>Destroyed: {info.frags}</p>
+        <br></br>
+        <p>Accuracy: {accuracy.toFixed(2)}%</p>
+        <br></br>
+        <button onClick={() => this.addToPlayerList(nickname, player.account_id)}>+ Add To Player List</button>
+        <br></br>
+        <br></br>
       </div>
     );
   }
