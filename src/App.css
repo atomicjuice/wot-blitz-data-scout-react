@@ -7,11 +7,11 @@
   position: fixed; /* optional depending on what you want to do in your app */
 }
 
-.container{
+/* .container{
   display: grid;
   grid-template-columns: [navbar] 15vw auto auto auto;
   grid-template-rows: 10vh 10vh auto auto;
-}
+} */
 
 /* .card {
   grid-column-start: [here];
@@ -21,8 +21,8 @@
   background-image: url(https://images2.alphacoders.com/711/711084.jpg);
   background-color: #cccccc;
   background-size: cover;
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  min-width: 100vw;
   background-attachment: fixed;
 }
 

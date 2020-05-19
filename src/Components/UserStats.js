@@ -38,7 +38,7 @@ class UserStats extends Component {
     const accuracy = info.hits / info.shots * 100
     return (
       <div className='playerStats'>
-        <p>Player name: {nickname}</p>
+        <h1>Player name: {nickname}</h1>
         <br></br>
         <p>Battles: {info.battles}</p>
         <br></br>
@@ -56,25 +56,6 @@ class UserStats extends Component {
         <br></br>
         <br></br>
         <button onClick={() => this.setPlayerOneComparisonID(player.account_id)}>+ Compare With Another User</button>
-
-
-        <p>Player name: {nickname}</p>
-        <br></br>
-        <p>Battles: {info.battles}</p>
-        <br></br>
-        <p>Won: {info.wins}</p>
-        <br></br>
-        <p>Losses: {info.losses}</p>
-        <br></br>
-        <p>Won And Survived: {info.win_and_survived}</p>
-        <br></br>
-        <p>Destroyed: {info.frags}</p>
-        <br></br>
-        <p>Accuracy: {accuracy.toFixed(2)}%</p>
-        <br></br>
-        <button onClick={() => this.addToPlayerList(nickname, player.account_id)}>+ Add To Player List</button>
-        <br></br>
-        <br></br>
       </div>
     );
   }

@@ -1,9 +1,9 @@
 .playerStats{
 text-align: center;
-margin-top: 15vh;
+margin-top: 10vh;
 grid-column-start: 3;
 /* grid-row-end: 2; */
-border: solid #2e8b57 ;
+/* border: solid #2e8b57 ; */
 }
 
 .clanStats{
