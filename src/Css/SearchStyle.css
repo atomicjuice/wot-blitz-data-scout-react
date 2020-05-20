@@ -24,6 +24,7 @@
 .userSearch {
   grid-column-start: 3;
   grid-row-start: 3;
+  /* margin-top: 10vh; */
   /* border: solid blue; */
   border-radius: 30%;
   /* background-image: url(https://www.metalsupplies.com/wp-content/uploads/2016/11/mild-steel-floor-plate.jpg); */
