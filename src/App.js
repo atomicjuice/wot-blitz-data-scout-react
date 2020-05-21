@@ -14,6 +14,7 @@ import UserStats from './Components/UserStats'
 import ClanComparisonSearch from './Components/ClanComparisonSearch'
 import ClanComparison from './Components/ClanComparison'
 import './App.css'
+// import backgroundVideo from './video/video-edited.mp4'
 
 
 class App extends Component {
@@ -142,19 +143,22 @@ class App extends Component {
 
   render() {
     return (
-      <div style= {{backgroundImage: "url('https://images2.alphacoders.com/711/711084.jpg')"}} className='container mainBackground'>
-        
+      <div className='container mainBackground'>
+
         <NavBar />
-          <Route exact path="/usersearch" render={() => <UserSearch setCurrentUser={this.setCurrentUser} apikey={this.state.apikey} />}></Route>
-          <Route exact path="/clansearch" render={() => <ClanSearch setCurrentClan={this.setCurrentClan} apikey={this.state.apikey} />}></Route>
-          <Route exact path="/userstats" render={() => <UserStats setPlayerList={this.setPlayerList} player={this.state.currentPlayerInfo} setPlayerOneComparisonID={this.setPlayerOneComparisonID} />}></Route>
-          <Route exact path="/clanstats" render={() => <ClanStats clan={this.state.currentClanInfo} setClanList={this.setClanList} setClanOneComparisonID={this.setClanOneComparisonID} />}></Route>
-          <Route exact path="/playerlist" render={() => <PlayerList renderPlayerFromList={this.renderPlayerFromList} />} />
-          <Route exact path="/clanlist" render={() => <ClanList renderClanFromList={this.renderClanFromList} />} />
-          <Route exact path="/playerComparison" render={() => <PlayerComparison currentPlayerInfo={this.state.currentPlayerInfo} playerToCompareInfo={this.state.playerToCompareInfo} />}></Route>
-          <Route exact path="/playerComparisonSearch" render={() => <PlayerComparisonSearch setPlayerTwoComparisonID={this.setPlayerTwoComparisonID} apikey={this.state.apikey} />}></Route>
-          <Route exact path="/clancomparisonsearch" render={() => <ClanComparisonSearch apikey={this.state.apikey} setClanTwoComparisonID={this.setClanTwoComparisonID} />} />
-          <Route exact path="/clancomparison" render={() => <ClanComparison currentClanInfo={this.state.currentClanInfo} clanTocompareinfo={this.state.clanTocompareinfo} />}></Route>
+        {/* <video autoPlay loop muted id="video">
+          <source src={backgroundVideo} type="video/mp4" />
+        </video> */}
+        <Route exact path="/usersearch" render={() => <UserSearch setCurrentUser={this.setCurrentUser} apikey={this.state.apikey} />}></Route>
+        <Route exact path="/clansearch" render={() => <ClanSearch setCurrentClan={this.setCurrentClan} apikey={this.state.apikey} />}></Route>
+        <Route exact path="/userstats" render={() => <UserStats setPlayerList={this.setPlayerList} player={this.state.currentPlayerInfo} setPlayerOneComparisonID={this.setPlayerOneComparisonID} />}></Route>
+        <Route exact path="/clanstats" render={() => <ClanStats clan={this.state.currentClanInfo} setClanList={this.setClanList} setClanOneComparisonID={this.setClanOneComparisonID} />}></Route>
+        <Route exact path="/playerlist" render={() => <PlayerList renderPlayerFromList={this.renderPlayerFromList} />} />
+        <Route exact path="/clanlist" render={() => <ClanList renderClanFromList={this.renderClanFromList} />} />
+        <Route exact path="/playerComparison" render={() => <PlayerComparison currentPlayerInfo={this.state.currentPlayerInfo} playerToCompareInfo={this.state.playerToCompareInfo} />}></Route>
+        <Route exact path="/playerComparisonSearch" render={() => <PlayerComparisonSearch setPlayerTwoComparisonID={this.setPlayerTwoComparisonID} apikey={this.state.apikey} />}></Route>
+        <Route exact path="/clancomparisonsearch" render={() => <ClanComparisonSearch apikey={this.state.apikey} setClanTwoComparisonID={this.setClanTwoComparisonID} />} />
+        <Route exact path="/clancomparison" render={() => <ClanComparison currentClanInfo={this.state.currentClanInfo} clanTocompareinfo={this.state.clanTocompareinfo} />}></Route>
 
       </div>
     );
