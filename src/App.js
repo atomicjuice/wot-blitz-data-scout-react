@@ -14,7 +14,7 @@ import UserStats from './Components/UserStats'
 import ClanComparisonSearch from './Components/ClanComparisonSearch'
 import ClanComparison from './Components/ClanComparison'
 import './App.css'
-import backgroundVideo from './video/video-edited.mp4'
+import backgroundVideo from './video/openshot-edit2.mp4'
 
 
 class App extends Component {
