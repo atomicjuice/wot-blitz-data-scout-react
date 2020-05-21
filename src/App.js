@@ -14,7 +14,7 @@ import UserStats from './Components/UserStats'
 import ClanComparisonSearch from './Components/ClanComparisonSearch'
 import ClanComparison from './Components/ClanComparison'
 import './App.css'
-// import backgroundVideo from './video/video-edited.mp4'
+import backgroundVideo from './video/video-edited.mp4'
 
 
 class App extends Component {
@@ -146,9 +146,9 @@ class App extends Component {
       <div className='container mainBackground'>
 
         <NavBar />
-        {/* <video autoPlay loop muted id="video">
+        <video autoPlay loop muted id="video">
           <source src={backgroundVideo} type="video/mp4" />
-        </video> */}
+        </video>
         <Route exact path="/usersearch" render={() => <UserSearch setCurrentUser={this.setCurrentUser} apikey={this.state.apikey} />}></Route>
         <Route exact path="/clansearch" render={() => <ClanSearch setCurrentClan={this.setCurrentClan} apikey={this.state.apikey} />}></Route>
         <Route exact path="/userstats" render={() => <UserStats setPlayerList={this.setPlayerList} player={this.state.currentPlayerInfo} setPlayerOneComparisonID={this.setPlayerOneComparisonID} />}></Route>
