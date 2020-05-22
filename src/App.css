@@ -13,7 +13,6 @@
   grid-template-rows: 10vh 10vh auto auto;
 }
 
-
 /* #video {
   position: absolute;
   top: 0;
@@ -25,7 +24,7 @@
 
 #video {
   position: fixed;
-  overflow: hidden;
+  /* overflow: hidden; */
   z-index: -100;
   width: 100%;
   filter: 
