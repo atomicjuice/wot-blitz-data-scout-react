@@ -2,7 +2,6 @@
   display: grid;
   white-space: nowrap;
   background: #00000059;
-  /* background: #000; */
   float: left;
   position: fixed;
   top: 0;
@@ -12,11 +11,11 @@
 ul {
   display: flex;
   flex-direction: row;
-  /* justify-content: flex-end; */
   list-style: none;
   margin: 0;
   padding: 0;
   width: 100vw;
+  align-items: center;
 }
 
 a{
@@ -36,25 +35,15 @@ a:hover{
 
 .appName{
   color: white;
-  /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
-  /* align-self: center; */
   width: 100vw;
+  font-size: x-large;
+}
+.appName:hover{
+  color: #E56206;
 }
 .linkStyle{
   justify-self: center;
 }
-
-/* .header {
-  padding-top: 5px;
-  position: fixed; 
-  width: 100%;
-  background: #263158;
-  text-align: center;
-  font-size: 26.5px;
-  color: white;
-  height: 10vh;
-  z-index: 1;
-} */
 
 
 
