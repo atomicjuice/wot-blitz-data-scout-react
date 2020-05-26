@@ -22,7 +22,7 @@ a{
   /* color: #377ca7; */
   color:white;
   /* display: block; */
-  padding: 0rem 2rem;
+  /* padding: 0rem 2rem; */
   text-decoration: none;
   /* width: 15vw; */
 }
@@ -34,15 +34,19 @@ a:hover{
 }
 
 .appName{
-  color: white;
+  /* color: white; */
+  color: whitesmoke;
   width: 100vw;
   font-size: x-large;
+  padding: 0rem 2rem;
+  text-decoration: none;
 }
 .appName:hover{
   color: #E56206;
 }
 .linkStyle{
   justify-self: center;
+  padding: 0rem 2rem;
 }
 
 

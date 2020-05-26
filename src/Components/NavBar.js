@@ -10,7 +10,7 @@ const NavBar = () => {
     <div>
       <nav className='navigate'>
         <ul>
-          <li className='appName'><Link to='usersearch'>World of Tanks Blitz Data Scout</Link></li>
+          <li className='appName'><Link to='usersearch' className='appName'>World of Tanks Blitz Data Scout</Link></li>
           <li className='linkStyle'><Link to='/usersearch'>Player Search</Link></li>
           <li className='linkStyle'><Link to='/clansearch'>Clan Search</Link></li>
           <li className='linkStyle'><Link to='/playerlist'>Player List</Link></li>
