@@ -38,10 +38,9 @@ class UserSearch extends Component {
 
   render() {
     return (
-      <div className='card userSearch playerSearch'>
+      <div className='playerSearch'>
         <div >
           <form onSubmit={this.handleSubmit} className='searchbar'>
-            <h1>Player Search</h1>
             <input name="nickname" type="text" placeholder="Nickname" ></input>
             <input type="submit" value="Scout" />
           </form>
