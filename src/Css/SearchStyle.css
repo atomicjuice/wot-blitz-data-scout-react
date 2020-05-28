@@ -1,56 +1,6 @@
-.searchbar{
-  margin-top: 15vh;
-  text-align: center;
-}
 
-.comparePlayerSearchbar{ 
-  margin-top: 15vh;
-  text-align: center;
-}
 
-.compareClanSearchbar{
-  margin-top: 15vh;
-  text-align: center;
-}
 
-/* .userSearch {
-  background-image: url(https://images8.alphacoders.com/468/thumb-1920-468190.jpg);
-  background-color: #cccccc;
-  background-size: cover;
-  background-blend-mode: multiply;
-  height: 100vh;
-  width: 100vw;
-} */
-.userSearch {
-  grid-column-start: 3;
-  grid-row-start: 3;
-  /* margin-top: 10vh; */
-  /* border: solid blue; */
-  border-radius: 30%;
-  /* background-image: url(https://www.metalsupplies.com/wp-content/uploads/2016/11/mild-steel-floor-plate.jpg); */
-  background-size: cover;
-  color: #377ca7;
-}
-
-.card {
-  box-shadow: 5px 14px 8px 5 rgba(209, 30, 30, 0.2);
-  transition: 0.3s;
-}
-
-.playerSearch{
-    background: 0 0;
-    border-color: #f2a900;
-    border-radius: 0;
-    border-width: 0 0 3px;
-    box-shadow: none;
-    color: #fff;
-    font-size: 22px;
-    font-weight: 400;
-    min-height: 86px;
-    padding: 0;
-   padding-right: 0px;
-
-}
 
 
 
