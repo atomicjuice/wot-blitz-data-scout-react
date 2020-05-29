@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom'
 class ClanSearch extends Component {
 
   state = {
-    id : null,
+    id: null,
     clan: null
   }
 
@@ -44,16 +44,12 @@ class ClanSearch extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit} className='searchbar'>
-        <h1>Clan Search</h1>
-        <br />
-        <br />
-        <br />
-        <input name="clanname" type="text" placeholder="Clan Name" ></input>
-        <br />
-        <br />
-        <input type="submit" value="Scout" />
-      </form>
+      <div className='searchBar'>
+        <form onSubmit={this.handleSubmit} className='searchbar'>
+          <input name="clanname" type="text" placeholder="Clan Name" className='input'></input>
+          <input type="submit" value="Scout" className='button' />
+        </form>
+      </div>
     );
   }
 }
