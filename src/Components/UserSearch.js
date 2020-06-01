@@ -29,12 +29,12 @@ class UserSearch extends Component {
     fetch(`https://api.wotblitz.eu/wotb/account/list/?application_id=${this.props.apikey}&search=${name}`)
       .then(resp => resp.json())
       .then(json => {
-        if (json.data[0]===undefined){
-          console.log('we got it')
-          //need to write the error message for when no player is found
-        }
+        if (json.data === undefined){
+          alert('Player Not Found')
+          this.props.history.push('/usersearch')
+        } else{
         const id = json.data[0].account_id
-        this.fetchUserInfo(id)
+        this.fetchUserInfo(id)}
       })
   }
 
