@@ -2,7 +2,7 @@ import React from 'react';
 
 const UserStatCard = ({}) => {
   return (
-    <div>
+    <div className='card'>
       
     </div>
   );

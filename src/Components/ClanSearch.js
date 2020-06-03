@@ -43,7 +43,6 @@ class ClanSearch extends Component {
           })
           this.fetchClanInfo(name, ID)
         }
-
       })
   }
 
