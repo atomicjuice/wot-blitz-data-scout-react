@@ -7,8 +7,8 @@ import '../App.css'
 class UserSearch extends Component {
 
 
-  renderUserStats = () => {
-    this.props.history.push('/userstats')
+  renderPlayerStats = () => {
+    this.props.history.push('/playerstats')
   }
 
   fetchUserInfo = (id) => {

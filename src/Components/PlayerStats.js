@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom'
 import '../Css/StatsStyle.css'
 
-class UserStats extends Component {
+class PlayerStats extends Component {
 
   playerLocalStorage = (localStorage.getItem('currentPlayer'))
   playerParsed = JSON.parse(this.playerLocalStorage)
@@ -61,4 +61,4 @@ class UserStats extends Component {
   }
 }
 
-export default withRouter(UserStats);
+export default withRouter(PlayerStats);
