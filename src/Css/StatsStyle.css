@@ -1,14 +1,14 @@
-.playerStats{
+.playerStats {
   color: aliceblue;
-text-align: center;
-margin-top: 10vh;
-grid-column-start: 2;
+  text-align: center;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  grid-column-start: 2;
 }
 
-.playerCard{
-border-radius: 20px;
-/* background-color: #6e7b78b8; */
-background-color: #508276b0;
+.playerCard {
+  border-radius: 20px;
+  background-color: #508276b0;
 }
 
 /* .playerStats:hover {
@@ -24,7 +24,14 @@ background-color: #508276b0;
   transition: 0.2s;
 } */
 
-.clanStats{
+.clanStats {
   text-align: center;
   margin-top: 15vh;
+  margin-bottom: 10vh;
+  color: aliceblue;
+}
+
+.clanCard {
+  border-radius: 20px;
+  background-color: #367e88b0;
 }
