@@ -8,12 +8,12 @@ class PlayerStats extends Component {
   playerParsed = JSON.parse(this.playerLocalStorage)
 
   state = {
-    player: !this.props.player ? this.playerParsed:this.props.player
+    player: !this.props.player ? this.playerParsed : this.props.player
   }
 
   addToPlayerList = (name, id) => {
     if (!localStorage.getItem('playerList')) {
-      localStorage.setItem('playerList', JSON.stringify({[name]: id}))
+      localStorage.setItem('playerList', JSON.stringify({ [name]: id }))
       const player = localStorage.getItem('playerList')
       const parsedPlayer = JSON.parse(player)
       this.props.setPlayerList(parsedPlayer)
@@ -37,25 +37,25 @@ class PlayerStats extends Component {
     const info = player.statistics.all
     const accuracy = info.hits / info.shots * 100
     return (
-      <div className='playerStats'>
-        <h1>Player name: {nickname}</h1>
-        <br></br>
-        <p>Battles: {info.battles}</p>
-        <br></br>
-        <p>Won: {info.wins}</p>
-        <br></br>
-        <p>Losses: {info.losses}</p>
-        <br></br>
-        <p>Won And Survived: {info.win_and_survived}</p>
-        <br></br>
-        <p>Destroyed: {info.frags}</p>
-        <br></br>
-        <p>Accuracy: {accuracy.toFixed(2)}%</p>
-        <br></br>
-        <button onClick={() => this.addToPlayerList(nickname, player.account_id)}>+ Add To Player List</button>
-        <br></br>
-        <br></br>
-        <button onClick={() => this.setPlayerOneComparisonID(player.account_id)}>+ Compare With Another User</button>
+      <div>
+        <div className='playerStats playerCard'>
+          <h1>Player name: {nickname}</h1>
+          <br></br>
+          <p>Battles: {info.battles}</p>
+          <br></br>
+          <p>Won: {info.wins}</p>
+          <br></br>
+          <p>Losses: {info.losses}</p>
+          <br></br>
+          <p>Won And Survived: {info.win_and_survived}</p>
+          <br></br>
+          <p>Destroyed: {info.frags}</p>
+          <br></br>
+          <p>Accuracy: {accuracy.toFixed(2)}%</p>
+          <br></br>
+          <button onClick={() => this.addToPlayerList(nickname, player.account_id)}>+ Add To Player List</button>
+          <button onClick={() => this.setPlayerOneComparisonID(player.account_id)}>+ Compare With Another User</button>
+        </div>
       </div>
     );
   }

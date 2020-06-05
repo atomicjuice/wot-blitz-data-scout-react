@@ -48,12 +48,6 @@ class ClanStats extends Component {
         <br />
         <h2>Minimum win/loss ratio needed to join: {clan.recruiting_options.wins_ratio} </h2>
         <br />
-        {/* <button className="comparebylist" onClick={addToComparison}>+ Compare Another Clan From Clan List</button> */}
-        {/* <br />
-        <br /> */}
-        {/* <button className="comparebysearch" onClick={addToComparison}>+ Compare Another Clan By Search</button> */}
-        {/* <br />
-        <br /> */}
         <button className="addtoclanlist" onClick={() => this.addToClanList(clan.name, clan.clan_id)}>+ Add To Clan List </button>
         <br></br>
         <br></br>

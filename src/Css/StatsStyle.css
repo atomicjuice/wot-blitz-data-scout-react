@@ -1,10 +1,28 @@
 .playerStats{
+  color: aliceblue;
 text-align: center;
 margin-top: 10vh;
-grid-column-start: 3;
-/* grid-row-end: 2; */
-/* border: solid #2e8b57 ; */
+grid-column-start: 2;
 }
+
+.playerCard{
+border-radius: 20px;
+/* background-color: #6e7b78b8; */
+background-color: #508276b0;
+}
+
+/* .playerStats:hover {
+  box-shadow: 0 8px 8px 0 #E56206;
+  box-shadow:
+0 2.8px 2.2px rgba(299, 98, 6, 0.034),
+0 6.7px 5.3px rgba(299, 98, 6, 0.048),
+0 12.5px 10px rgba(299, 98, 6, 0.06),
+0 22.3px 17.9px rgba(80, 130, 118, 0.69),
+0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+0 100px 80px rgba(0, 0, 0, 0.12)
+;
+  transition: 0.2s;
+} */
 
 .clanStats{
   text-align: center;
