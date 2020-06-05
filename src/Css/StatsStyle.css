@@ -1,9 +1,9 @@
 .playerStats {
   color: aliceblue;
   text-align: center;
-  margin-top: 10vh;
+  margin-top: 15vh;
   margin-bottom: 10vh;
-  grid-column-start: 2;
+  grid-column-start: 3;
 }
 
 .playerCard {
@@ -29,9 +29,16 @@
   margin-top: 15vh;
   margin-bottom: 10vh;
   color: aliceblue;
+  /* grid-column-start: 3; */
 }
 
 .clanCard {
+  display: grid;
+  /* grid-template-columns: subgrid; */
   border-radius: 20px;
   background-color: #367e88b0;
 }
+
+/* .addtoclanlist{
+  grid-column-start: 3;
+} */
