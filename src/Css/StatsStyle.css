@@ -1,14 +1,29 @@
 .playerStats {
-  color: aliceblue;
-  text-align: center;
-  margin-top: 15vh;
-  margin-bottom: 10vh;
-  grid-column-start: 3;
+  /* display: grid; */
+  grid-column-start: 2;
 }
 
 .playerCard {
   border-radius: 20px;
   background-color: #508276b0;
+  color: aliceblue;
+  text-align: center;
+  margin-top: 15vh;
+  margin-bottom: 10vh;
+  grid-column-start: 3;
+  padding-bottom: 20px
+}
+
+.buttons{
+  display:grid;
+  grid-template-columns: auto auto auto;
+}
+
+.addToList{
+  color: blue;
+  background-color: cornflowerblue;
+  border-radius: 10%;
+  border-color: cornflowerblue;
 }
 
 /* .playerStats:hover {
@@ -29,12 +44,10 @@
   margin-top: 15vh;
   margin-bottom: 10vh;
   color: aliceblue;
-  /* grid-column-start: 3; */
 }
 
 .clanCard {
-  display: grid;
-  /* grid-template-columns: subgrid; */
+  /* grid-row-start: 3; */
   border-radius: 20px;
   background-color: #367e88b0;
 }
