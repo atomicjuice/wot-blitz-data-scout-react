@@ -1,5 +1,4 @@
 .playerStats {
-  /* display: grid; */
   grid-column-start: 2;
 }
 
@@ -8,10 +7,10 @@
   background-color: #508276b0;
   color: aliceblue;
   text-align: center;
-  margin-top: 15vh;
+  margin-top: 7vh;
   margin-bottom: 10vh;
   grid-column-start: 3;
-  padding-bottom: 20px
+  padding: 0px 6vw 20px 6vw;
 }
 
 .buttons{
@@ -20,24 +19,47 @@
 }
 
 .addToList{
-  color: blue;
-  background-color: cornflowerblue;
+  color: #fff;
+  background-color: #3E3B38DB;;
   border-radius: 10%;
-  border-color: cornflowerblue;
+  border-color: #ff45007d;
+  border-width: 1px;
+  padding: 10px 10px;
 }
 
-/* .playerStats:hover {
-  box-shadow: 0 8px 8px 0 #E56206;
-  box-shadow:
-0 2.8px 2.2px rgba(299, 98, 6, 0.034),
-0 6.7px 5.3px rgba(299, 98, 6, 0.048),
-0 12.5px 10px rgba(299, 98, 6, 0.06),
-0 22.3px 17.9px rgba(80, 130, 118, 0.69),
-0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-0 100px 80px rgba(0, 0, 0, 0.12)
-;
-  transition: 0.2s;
-} */
+.addToList:hover{
+  color: aliceblue;
+  background-color: #E56306E3;
+}
+
+.compareFromList{
+  color: #fff;
+  background-color: #3E3B38DB;;
+  border-radius: 10%;
+  border-color: #ff45007d;
+  border-width: 1px;
+  padding: 10px 10px;
+  margin: 0px 4vw;
+}
+
+.CompareBySearch{
+  color: #fff;
+  background-color: #3E3B38DB;;
+  border-radius: 10%;
+  border-color: #ff45007d;
+  border-width: 1px;
+  padding: 10px 10px;
+}
+
+.compareFromList:hover{
+  color: aliceblue;
+  background-color: #E56306E3;
+}
+
+.CompareBySearch:hover{
+  color: aliceblue;
+  background-color: #E56306E3;
+}
 
 .clanStats {
   text-align: center;
@@ -47,7 +69,6 @@
 }
 
 .clanCard {
-  /* grid-row-start: 3; */
   border-radius: 20px;
   background-color: #367e88b0;
 }

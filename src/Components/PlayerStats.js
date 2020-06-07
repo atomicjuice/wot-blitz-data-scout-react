@@ -40,7 +40,6 @@ class PlayerStats extends Component {
       <div className='playerStats'>
         <div className='playerCard'>
           <h1>Player name: {nickname}</h1>
-          <br></br>
           <p>Battles: {info.battles}</p>
           <br></br>
           <p>Won: {info.wins}</p>
@@ -54,9 +53,9 @@ class PlayerStats extends Component {
           <p>Accuracy: {accuracy.toFixed(2)}%</p>
           <br></br>
           <div className='buttons'>
-            <button className="CompareBySearch" onClick={() => this.setPlayerOneComparisonID(player.account_id)}>+ Compare With Another User</button>
-            <button className="compareFromList"onClick>+ Compare With Player From List</button>         
-            <button className="addToList" onClick={() => this.addToPlayerList(nickname, player.account_id)}>+ Add To Player List</button>
+            <button className="CompareBySearch" onClick={() => this.setPlayerOneComparisonID(player.account_id)}> Compare With <br></br> Another User</button>
+            <button className="compareFromList"onClick> Compare With <br></br>Player From List</button>         
+            <button className="addToList" onClick={() => this.addToPlayerList(nickname, player.account_id)}>+ Add To <br></br> Player List</button>
           </div>
         </div>
       </div>
