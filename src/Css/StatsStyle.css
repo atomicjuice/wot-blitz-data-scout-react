@@ -10,7 +10,7 @@
   margin-top: 7vh;
   margin-bottom: 10vh;
   grid-column-start: 3;
-  padding: 0px 6vw 20px 6vw;
+  padding: 0px 4vw 20px 4vw;
 }
 
 .buttons{
@@ -25,11 +25,7 @@
   border-color: #ff45007d;
   border-width: 1px;
   padding: 10px 10px;
-}
-
-.addToList:hover{
-  color: aliceblue;
-  background-color: #E56306E3;
+  width: 9vw;
 }
 
 .compareFromList{
@@ -39,7 +35,8 @@
   border-color: #ff45007d;
   border-width: 1px;
   padding: 10px 10px;
-  margin: 0px 4vw;
+  margin: 0px 2vw;
+  width: 9vw;
 }
 
 .CompareBySearch{
@@ -49,6 +46,12 @@
   border-color: #ff45007d;
   border-width: 1px;
   padding: 10px 10px;
+  width: 9vw;
+}
+
+.addToList:hover{
+  color: aliceblue;
+  background-color: #E56306E3;
 }
 
 .compareFromList:hover{
