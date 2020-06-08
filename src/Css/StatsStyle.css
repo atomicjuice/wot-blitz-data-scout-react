@@ -9,13 +9,26 @@
   text-align: center;
   margin-top: 7vh;
   margin-bottom: 10vh;
-  grid-column-start: 3;
+  padding: 0px 4vw 20px 4vw;
+}
+
+.clanStats {
+  grid-column-start: 2;
+}
+
+.clanCard {
+  text-align: center;
+  border-radius: 20px;
+  background-color: #367e88b0;
+  margin-top: 15vh;
+  margin-bottom: 10vh;
+  color: aliceblue;
   padding: 0px 4vw 20px 4vw;
 }
 
 .buttons{
-  display:grid;
-  grid-template-columns: auto auto auto;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .addToList{
@@ -34,7 +47,6 @@
   border-radius: 10%;
   border-color: #ff45007d;
   border-width: 1px;
-  padding: 10px 10px;
   margin: 0px 2vw;
   width: 9vw;
 }
@@ -64,18 +76,5 @@
   background-color: #E56306E3;
 }
 
-.clanStats {
-  text-align: center;
-  margin-top: 15vh;
-  margin-bottom: 10vh;
-  color: aliceblue;
-}
 
-.clanCard {
-  border-radius: 20px;
-  background-color: #367e88b0;
-}
 
-/* .addtoclanlist{
-  grid-column-start: 3;
-} */

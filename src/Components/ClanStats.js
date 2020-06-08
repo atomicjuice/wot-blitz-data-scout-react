@@ -33,8 +33,8 @@ class ClanStats extends Component {
   render() {
     const clan = this.state.clan
     return (
-      <div>
-        <div className='clanStats clanCard'>
+      <div className='clanStats'>
+        <div className='clanCard'>
           <h1>Name: {clan.name}</h1>
           <br />
           <h2>Founder Name: {clan.creator_name}</h2>
@@ -49,9 +49,11 @@ class ClanStats extends Component {
           <br />
           <h2>Minimum win/loss ratio needed to join: {clan.recruiting_options.wins_ratio} </h2>
           <br />
-          <button className="addtoclanlist" onClick={() => this.addToClanList(clan.name, clan.clan_id)}>+ Add To Clan List </button>
-          <button className="compareBySearch" onClick={() => this.setClanOneComparisonID(clan.clan_id)}>+ Compare With Clan By Search</button>
+          <div className="buttons">
+          <button className="CompareBySearch" onClick={() => this.setClanOneComparisonID(clan.clan_id)}>+ Compare With Clan By Search</button>
           <button className="compareFromList"onClick>+Compare With Clan From List</button>
+          <button className="addToList" onClick={() => this.addToClanList(clan.name, clan.clan_id)}>+ Add To Clan List </button>
+          </div>
         </div>
       </div>
     );
