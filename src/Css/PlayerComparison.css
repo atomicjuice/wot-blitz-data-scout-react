@@ -1,16 +1,31 @@
-.split{
+.playerComparison{
   display:grid;
-  grid-template-columns: auto, auto ;
+  grid-template-columns: auto auto auto ;
   /* text-align: center; */
 }
 
 .player1{
-  margin-top: 15vh;
-  text-align: right;
+  text-align: center;
+  border-radius: 20px;
+  background-color: #cacaca9e;
+  margin-top: 22vh;
+  margin-bottom: 2vh;
+  margin-right: 11vw;
+  color: aliceblue;
+  padding: 0px 4vw 20px 4vw;
+  grid-column-start: 1;
 }
 
 .player2{
-  text-align: right;
+  text-align: center;
+  border-radius: 20px;
+  background-color: #cacaca9e;
+  margin-top: 22vh;
+  margin-bottom: 2vh;
+  margin-left: 11vw;
+  color: aliceblue;
+  padding: 0px 4vw 20px 4vw;
+  grid-column-start: 3;
 }
 
 .green{
@@ -18,7 +33,7 @@
 }
 
 .red{
-  color: red;
+  color: #bb2121;
 }
 
 /* .graph{

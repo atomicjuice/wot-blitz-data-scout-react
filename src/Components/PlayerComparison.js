@@ -31,9 +31,7 @@ class PlayerComparison extends Component {
     const playerOneAccuracy = playerOne.hits / playerOne.shots * 100
     const playerTwoAccuracy = playerTwo.hits / playerTwo.shots * 100
     return (
-      <div className='split'>
-
-
+      <div className='playerComparison'>
         <div className='player1' >
           <h1 style={{ color: 'blue' }}>{playerOneNickname}</h1>
           <br />
@@ -54,15 +52,6 @@ class PlayerComparison extends Component {
           <p className={playerOne.battles < playerTwo.battles ? 'green' : 'red'}>destroyed:{playerTwo.frags}</p>
           <p className={playerOne.battles < playerTwo.battles ? 'green' : 'red'}>won and survived:{playerTwo.win_and_survived}</p>
           <p className={playerOneAccuracy < playerTwoAccuracy ? 'green' : 'red'}>accuracy:{playerTwoAccuracy.toFixed(2)}%</p>
-          
-          <br />
-          
-          <br />
-          
-          <br />
-          
-          <br />
-          
       </div>
       </div>
     );
