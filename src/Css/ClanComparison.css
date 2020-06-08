@@ -1,14 +1,34 @@
-.clanOne{
-  margin-top: 15vh;
-  text-align: right;
-
+.clanOneCard{
+  text-align: center;
+  border-radius: 20px;
+  background-color: #cacaca9e;
+  margin-top: 22vh;
+  margin-bottom: 2vh;
+  margin-left: 3vw;
+  color: aliceblue;
+  padding: 0px 4vw 20px 4vw;
+  grid-column-start: 1;
 }
 
-.clanTwo{
-  text-align: right;
+.clanComparison{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 100vw;
 }
 
-.clanOneTitle{
+.clanTwoCard{
+  margin-top: 22vh;
+  grid-column-start: 3;
+  text-align: center;
+  border-radius: 20px;
+  background-color: #cacaca9e;
+  margin-bottom: 2vh;
+  margin-right: 3vw;
+  color: aliceblue;
+  padding: 0px 4vw 20px 4vw;
+}
+
+.clanOneTitle{ 
   color:blue
 }
 
