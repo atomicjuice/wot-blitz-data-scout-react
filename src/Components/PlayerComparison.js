@@ -34,7 +34,6 @@ class PlayerComparison extends Component {
       <div className='split'>
 
 
-        {/* <h1>player Comparison</h1> */}
         <div className='player1' >
           <h1 style={{ color: 'blue' }}>{playerOneNickname}</h1>
           <br />

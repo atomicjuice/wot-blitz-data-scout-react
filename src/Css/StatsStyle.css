@@ -4,12 +4,13 @@
 
 .playerCard {
   border-radius: 20px;
-  background-color: #508276b0;
+  background-color: #cacaca9e;
   color: aliceblue;
   text-align: center;
-  margin-top: 7vh;
+  margin-top: 8vh;
   margin-bottom: 10vh;
   padding: 0px 4vw 20px 4vw;
+  /* box-shadow: 8px 8px 0px 0 rgba(0,0,0,0.2); */
 }
 
 .clanStats {
@@ -19,9 +20,9 @@
 .clanCard {
   text-align: center;
   border-radius: 20px;
-  background-color: #367e88b0;
-  margin-top: 15vh;
-  margin-bottom: 10vh;
+  background-color: #cacaca9e;
+  margin-top: 7vh;
+  margin-bottom: 2vh;
   color: aliceblue;
   padding: 0px 4vw 20px 4vw;
 }
