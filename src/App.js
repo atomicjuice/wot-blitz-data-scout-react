@@ -14,6 +14,7 @@ import PlayerStats from './Components/PlayerStats'
 import ClanComparisonSearch from './Components/ClanComparisonSearch'
 import ClanComparison from './Components/ClanComparison'
 import PlayerComparisonFromList from './Components/PlayerComparisonFromList'
+import ComparisonFromClanList from './Components/ComparisonFromClanList'
 import './App.css'
 import backgroundVideo from './video/openshot-edit2.mp4'
 
@@ -111,11 +112,25 @@ class App extends Component {
     this.props.history.push('/playerlistForComparison')
   }
 
+  comparisonFromClanList = id => {
+    this.setState({
+      playerOneID: id
+    })
+    this.props.history.push('/comparisonFromClanList')
+  }
+
+  setClanOneComparisonID = id => {
+    this.setState({
+      clanTocompareID: id
+    })
+    this.props.history.push('/clanListForComparison')
+  }
+
   setPlayerOneComparisonID = id => {
     this.setState({
       playerOneID: id
     })
-    this.props.history.push('/PlayerComparisonSearch')
+    this.props.history.push('/playerComparisonSearch')
   }
 
   setClanOneComparisonID = id => {
@@ -130,7 +145,6 @@ class App extends Component {
       .then(resp => resp.json())
       .then(json => {
         const info = json.data[id]
-        // console.log(json.data[id])   
         localStorage.setItem('comparisonClan', JSON.stringify(info))
         this.setState({
           clanTocompareinfo: info
@@ -175,18 +189,18 @@ class App extends Component {
         <video autoPlay loop muted id="video">
           <source src={backgroundVideo} type="video/mp4" />
         </video>
+        <Route exact path="/comparisonFromClanList" render={() => <ComparisonFromClanList comparisonFromClanList={this.comparisonFromClanList} />}></Route>
         <Route exact path="/playerlistForComparison" render={() => <PlayerComparisonFromList setPlayerTwoComparisonIDfromList={this.setPlayerTwoComparisonIDfromList}/>}></Route>
         <Route exact path="/usersearch" render={() => <UserSearch setCurrentUser={this.setCurrentUser} apikey={this.state.apikey} />}></Route>
         <Route exact path="/clansearch" render={() => <ClanSearch setCurrentClan={this.setCurrentClan} apikey={this.state.apikey} />}></Route>
         <Route exact path="/playerstats" render={() => <PlayerStats setPlayerList={this.setPlayerList} player={this.state.currentPlayerInfo} setPlayerOneComparisonID={this.setPlayerOneComparisonID} compareFromPlayerList={this.compareFromPlayerList} />}></Route>
-        <Route exact path="/clanstats" render={() => <ClanStats clan={this.state.currentClanInfo} setClanList={this.setClanList} setClanOneComparisonID={this.setClanOneComparisonID} />}></Route>
+        <Route exact path="/clanstats" render={() => <ClanStats clan={this.state.currentClanInfo} setClanList={this.setClanList} setClanOneComparisonID={this.setClanOneComparisonID} comparisonFromClanList={this.comparisonFromClanList} />}></Route>
         <Route exact path="/playerlist" render={() => <PlayerList renderPlayerFromList={this.renderPlayerFromList} />} />
         <Route exact path="/clanlist" render={() => <ClanList renderClanFromList={this.renderClanFromList} />} />
         <Route exact path="/playerComparison" render={() => <PlayerComparison currentPlayerInfo={this.state.currentPlayerInfo} playerToCompareInfo={this.state.playerToCompareInfo} />}></Route>
         <Route exact path="/playerComparisonSearch" render={() => <PlayerComparisonSearch setPlayerTwoComparisonID={this.setPlayerTwoComparisonID} apikey={this.state.apikey} />}></Route>
         <Route exact path="/clancomparisonsearch" render={() => <ClanComparisonSearch apikey={this.state.apikey} setClanTwoComparisonID={this.setClanTwoComparisonID} />} />
         <Route exact path="/clancomparison" render={() => <ClanComparison currentClanInfo={this.state.currentClanInfo} clanTocompareinfo={this.state.clanTocompareinfo} />}></Route>
-
       </div>
     );
   }
