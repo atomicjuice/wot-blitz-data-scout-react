@@ -42,7 +42,7 @@ class UserSearch extends Component {
 
   render() {
     return (
-      <div className='searchBar'>
+      <div className='searchBar'> 
           <form onSubmit={this.handleSubmit} >
             <input name="nickname" type="text" placeholder="Insert Player Name" className='input'></input>
             <input type="submit" value="Scout" className='button'/>

@@ -29,7 +29,7 @@ class PlayerStats extends Component {
   }
 
   setPlayerOneComparisonID = this.props.setPlayerOneComparisonID
-  compareFromPlayerList = this.props.compareFromPlayerList
+  compareFromList = this.props.compareFromList
 
 
   render() {
@@ -54,8 +54,8 @@ class PlayerStats extends Component {
           <p>Accuracy: {accuracy.toFixed(2)}%</p>
           <br></br>
           <div className='buttons'>
-            <button className="CompareBySearch" onClick={() => this.setPlayerOneComparisonID(player.account_id)}> Compare With <br></br> Another User</button>
-            <button className="compareFromList"onClick={() => this.compareFromPlayerList(player.account_id)}> Compare With <br></br>Player From List</button>         
+            <button className="CompareBySearch" onClick={() => this.setPlayerOneComparisonID(player.account_id)}>Compare Players By Search</button>
+            <button className="compareFromList"onClick={() => this.compareFromList(player.account_id)}> Compare With <br></br>Player From List</button>         
             <button className="addToList" onClick={() => this.addToPlayerList(nickname, player.account_id)}>+ Add To <br></br> Player List</button>
           </div>
         </div>
