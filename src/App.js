@@ -69,6 +69,8 @@ class App extends Component {
     this.props.history.push('/playerstats')
   }
 
+  // setClanTwoComparisonIDfromList
+
   setPlayerTwoComparisonIDfromList = (nickname) => {
     const playerList = localStorage.getItem('playerList')
     const playerListParsed = JSON.parse(playerList)
@@ -102,7 +104,7 @@ class App extends Component {
       })
   }
 
-  compareFromList = id => {
+  compareFromPlayerList = id => {
     this.setState({
       playerOneID: id
     })
@@ -176,7 +178,7 @@ class App extends Component {
         <Route exact path="/playerlistForComparison" render={() => <PlayerComparisonFromList setPlayerTwoComparisonIDfromList={this.setPlayerTwoComparisonIDfromList}/>}></Route>
         <Route exact path="/usersearch" render={() => <UserSearch setCurrentUser={this.setCurrentUser} apikey={this.state.apikey} />}></Route>
         <Route exact path="/clansearch" render={() => <ClanSearch setCurrentClan={this.setCurrentClan} apikey={this.state.apikey} />}></Route>
-        <Route exact path="/playerstats" render={() => <PlayerStats setPlayerList={this.setPlayerList} player={this.state.currentPlayerInfo} setPlayerOneComparisonID={this.setPlayerOneComparisonID} compareFromList={this.compareFromList} />}></Route>
+        <Route exact path="/playerstats" render={() => <PlayerStats setPlayerList={this.setPlayerList} player={this.state.currentPlayerInfo} setPlayerOneComparisonID={this.setPlayerOneComparisonID} compareFromPlayerList={this.compareFromPlayerList} />}></Route>
         <Route exact path="/clanstats" render={() => <ClanStats clan={this.state.currentClanInfo} setClanList={this.setClanList} setClanOneComparisonID={this.setClanOneComparisonID} />}></Route>
         <Route exact path="/playerlist" render={() => <PlayerList renderPlayerFromList={this.renderPlayerFromList} />} />
         <Route exact path="/clanlist" render={() => <ClanList renderClanFromList={this.renderClanFromList} />} />

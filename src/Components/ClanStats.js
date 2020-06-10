@@ -29,6 +29,7 @@ class ClanStats extends Component {
   }
 
   setClanOneComparisonID = this.props.setClanOneComparisonID
+  // compareFromClanList
 
   render() {
     const clan = this.state.clan
