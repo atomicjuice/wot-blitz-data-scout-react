@@ -70,7 +70,23 @@ class App extends Component {
     this.props.history.push('/playerstats')
   }
 
-  // setClanTwoComparisonIDfromList
+  setClanTwoComparisonIDfromList = name => {
+
+    const clanList = localStorage.getItem('clanList')
+    const clanListParsed = JSON.parse(clanList)
+    const clanID = clanListParsed[name]
+    
+    fetch(`https://api.wotblitz.eu/wotb/clans/info/?application_id=${this.state.apikey}&clan_id=${clanID}`)
+      .then(resp => resp.json())
+      .then(json => {
+        const info = json.data[clanID]
+        localStorage.setItem('comparisonClan', JSON.stringify(info))
+        this.setState({
+          clanTocompareinfo: info
+        })
+        this.props.history.push('/clancomparison')
+      })
+  }
 
   setPlayerTwoComparisonIDfromList = (nickname) => {
     const playerList = localStorage.getItem('playerList')
@@ -189,7 +205,7 @@ class App extends Component {
         <video autoPlay loop muted id="video">
           <source src={backgroundVideo} type="video/mp4" />
         </video>
-        <Route exact path="/comparisonFromClanList" render={() => <ComparisonFromClanList comparisonFromClanList={this.comparisonFromClanList} />}></Route>
+        <Route exact path="/comparisonFromClanList" render={() => <ComparisonFromClanList setClanTwoComparisonIDfromList={this.setClanTwoComparisonIDfromList} />}></Route>
         <Route exact path="/playerlistForComparison" render={() => <PlayerComparisonFromList setPlayerTwoComparisonIDfromList={this.setPlayerTwoComparisonIDfromList}/>}></Route>
         <Route exact path="/usersearch" render={() => <UserSearch setCurrentUser={this.setCurrentUser} apikey={this.state.apikey} />}></Route>
         <Route exact path="/clansearch" render={() => <ClanSearch setCurrentClan={this.setCurrentClan} apikey={this.state.apikey} />}></Route>
