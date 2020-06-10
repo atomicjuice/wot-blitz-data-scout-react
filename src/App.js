@@ -13,6 +13,7 @@ import ClanList from './Components/ClanList';
 import PlayerStats from './Components/PlayerStats'
 import ClanComparisonSearch from './Components/ClanComparisonSearch'
 import ClanComparison from './Components/ClanComparison'
+import PlayerComparisonFromList from './Components/PlayerComparisonFromList'
 import './App.css'
 import backgroundVideo from './video/openshot-edit2.mp4'
 
@@ -68,6 +69,22 @@ class App extends Component {
     this.props.history.push('/playerstats')
   }
 
+  setPlayerTwoComparisonIDfromList = (nickname) => {
+    const playerList = localStorage.getItem('playerList')
+    const playerListParsed = JSON.parse(playerList)
+    const PlayerID = playerListParsed[nickname]
+    fetch(`https://api.wotblitz.eu/wotb/account/info/?application_id=${this.state.apikey}&account_id=${PlayerID}`)
+      .then(resp => resp.json())
+      .then(json => {
+        const info = json.data[PlayerID]
+        this.setState({
+          playerToCompareInfo: info
+        })
+        localStorage.setItem('comparisonPlayer', JSON.stringify(info))
+        this.props.history.push('/PlayerComparison')
+      })
+    }
+
   setPlayerTwoComparisonID = (nickname, id) => {
     this.setState({
       playerToCompareNickname: nickname,
@@ -89,7 +106,7 @@ class App extends Component {
     this.setState({
       playerOneID: id
     })
-    this.props.history.push('/playerlist')
+    this.props.history.push('/playerlistForComparison')
   }
 
   setPlayerOneComparisonID = id => {
@@ -156,6 +173,7 @@ class App extends Component {
         <video autoPlay loop muted id="video">
           <source src={backgroundVideo} type="video/mp4" />
         </video>
+        <Route exact path="/playerlistForComparison" render={() => <PlayerComparisonFromList setPlayerTwoComparisonIDfromList={this.setPlayerTwoComparisonIDfromList}/>}></Route>
         <Route exact path="/usersearch" render={() => <UserSearch setCurrentUser={this.setCurrentUser} apikey={this.state.apikey} />}></Route>
         <Route exact path="/clansearch" render={() => <ClanSearch setCurrentClan={this.setCurrentClan} apikey={this.state.apikey} />}></Route>
         <Route exact path="/playerstats" render={() => <PlayerStats setPlayerList={this.setPlayerList} player={this.state.currentPlayerInfo} setPlayerOneComparisonID={this.setPlayerOneComparisonID} compareFromList={this.compareFromList} />}></Route>
