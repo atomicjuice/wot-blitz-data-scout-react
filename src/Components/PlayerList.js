@@ -11,7 +11,6 @@ class PlayerList extends Component {
     delete playerListParsed[name]
     localStorage.setItem('playerList', JSON.stringify(playerListParsed))
     this.props.history.push('/playerList')
-    console.log(playerListParsed)
   }
 
   checkList = () => {

@@ -17,6 +17,7 @@ class PlayerStats extends Component {
       const player = localStorage.getItem('playerList')
       const parsedPlayer = JSON.parse(player)
       this.props.setPlayerList(parsedPlayer)
+      alert('Player Added To List')
     }
     else {
       let retreivedData = localStorage.getItem('playerList')
@@ -24,7 +25,7 @@ class PlayerStats extends Component {
       playerArray[name] = id
       localStorage.setItem('playerList', JSON.stringify(playerArray))
       this.props.setPlayerList(playerArray)
-      console.log(localStorage)
+      alert('Player Added To List')
     }
   }
 
