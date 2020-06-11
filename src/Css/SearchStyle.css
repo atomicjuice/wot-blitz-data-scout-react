@@ -23,6 +23,7 @@
     width: 100%;
     caret-color: #E56206;
     border-width: 0 0 3px;
+    /* border-width: 0 3px 0 3px; */
     font-size: 22px;
     background: transparent;
     line-height: 2.0;

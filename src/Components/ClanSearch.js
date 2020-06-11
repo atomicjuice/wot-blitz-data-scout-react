@@ -49,9 +49,9 @@ class ClanSearch extends Component {
 
   render() {
     return (
-      <div className='searchBar'>
-        <form onSubmit={this.handleSubmit} className='searchbar'>
-          <input name="clanname" type="text" placeholder="Clan Name" className='input'></input>
+      <div className='searchBar'> 
+        <form onSubmit={this.handleSubmit}>
+          <input name="clanname" type="text" placeholder="Enter Clan Name" className='input'></input>
           <input type="submit" value="Scout" className='button' />
         </form>
       </div>

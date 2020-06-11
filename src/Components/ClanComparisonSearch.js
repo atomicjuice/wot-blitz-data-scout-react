@@ -21,16 +21,13 @@ class ClanComparisonSearch extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit} className='compareClanSearchbar'>
-        <h1>Enter Clan To Compare With</h1>
-        <br />
-        <br />
-        <br />
-        <input onChange={this.onChange} name="Clan" type="text" placeholder="Clan" ></input>
-        <br />
-        <br />
-        <input type="submit" value="Scout" />
-      </form>
+      <div className='searchBar'>
+        <form onSubmit={this.handleSubmit} >
+          <input onChange={this.onChange} name="Clan" type="text" placeholder="Enter Clan Name" className='input' ></input>
+          <input type="submit" value="Scout" className='button' />
+        </form>
+      </div>
+
     );
   }
 }
