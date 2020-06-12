@@ -21,7 +21,6 @@ class PlayerComparisonFromList extends Component {
     return (
       <div className='playerList'>
         {this.checkList()}
-        you have arrived
       </div>
     );
   }

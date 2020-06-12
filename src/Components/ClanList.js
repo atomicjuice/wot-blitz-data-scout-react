@@ -26,11 +26,16 @@ class ClanList extends Component {
       return list
     }
   }
+  myFunction = () => {
+    const clans = localStorage.getItem('clanList')
+    console.log(clans)
+  }
 
   render() {
     return (
       <div className='clanList'>
         {this.checkList()}
+        <button onClick= {() => this.myFunction()}>go</button>
       </div>
     );
   }
