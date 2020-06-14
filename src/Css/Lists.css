@@ -10,6 +10,37 @@
   margin-top: 20vh;
 }
 
+.playerName{
+  color: #fff;
+  background-color: #3E3B38DB;
+  border-radius: 10%;
+  border-color: #ff45007d;
+  border-width: 1px;
+  padding: 10px 10px;
+  width: 9vw;
+}
+
 .removeButton{
-  
+  color: #fff;
+  background-color: #3E3B38DB;
+  border-radius: 10%;
+  border-color: #ff45007d;
+  border-width: 1px;
+  padding: 10px 10px;
+  width: 9vw;
+  margin-left: 2vw;
+  margin-bottom: 1vh;
+}
+
+.playerName:hover{
+  color: aliceblue;
+  background-color: #E56306E3;
+}
+
+.removeButton:hover{
+  color: aliceblue;
+  background-color: #E56306E3;
+}
+
+.removeButton{
 }
