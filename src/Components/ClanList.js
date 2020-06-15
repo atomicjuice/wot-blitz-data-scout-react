@@ -21,23 +21,18 @@ class ClanList extends Component {
       const clansObject = localStorage.getItem('clanList')
       const clans = JSON.parse(clansObject)
       const clanNames = Object.keys(clans)
-      const list = clanNames.map(name => <li className='clanName'><button onClick={() => renderClanFromList(name)}><br />{name}</button>
+      const list = clanNames.map(name => <li ><button className='clanName' onClick={() => renderClanFromList(name)}><br />{name}</button>
       <button className='removeButton' onClick={() => this.removeClanFromList(name)}>Remove Clan From List</button> </li> )
       return list
     }
-  }
-  myFunction = () => {
-    const clans = localStorage.getItem('clanList')
-    console.log(clans)
   }
 
   render() {
     return (
       <div className='clanList'>
         {this.checkList()}
-        <button onClick= {() => this.myFunction()}>go</button>
       </div>
-    );
+    )
   }
 }
 

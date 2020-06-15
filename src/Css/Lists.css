@@ -37,10 +37,40 @@
   background-color: #E56306E3;
 }
 
-.removeButton:hover{
+.clanName:hover{
   color: aliceblue;
   background-color: #E56306E3;
 }
 
-.removeButton{
+.removeButton:hover{
+  color: aliceblue;
+  background-color: red;
 }
+
+.clanName{
+  color: #fff;
+  background-color: #3E3B38DB;
+  border-radius: 10%;
+  border-color: #ff45007d;
+  border-width: 1px;
+  padding: 10px 10px;
+  width: 9vw;
+  margin-left: 2vw;
+  margin-bottom: 1vh;
+}
+
+.clanName{
+  color: #fff;
+  background-color: #3E3B38DB;
+  border-radius: 10%;
+  border-color: #ff45007d;
+  border-width: 1px;
+  padding: 10px 10px;
+  width: 9vw;
+  margin-left: 2vw;
+  margin-bottom: 1vh;
+}
+
+
+
+/* .removeButton{} */
