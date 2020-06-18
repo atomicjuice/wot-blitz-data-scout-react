@@ -10,6 +10,13 @@
   margin-top: 20vh;
 }
 
+.playerDiv{
+  border: solid 1px #fff;
+  margin-bottom: 3vh;
+  padding: 3px 15px;
+  border-radius: 10%;
+}
+
 .playerName{
   color: #fff;
   background-color: #3E3B38DB;
