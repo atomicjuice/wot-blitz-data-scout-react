@@ -23,7 +23,7 @@
   border-radius: 10%;
   border-color: #ff45007d;
   border-width: 1px;
-  padding: 10px 10px;
+  padding-bottom: inherit;
   width: 9vw;
 }
 
