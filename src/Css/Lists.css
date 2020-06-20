@@ -11,9 +11,11 @@
 }
 
 .playerDiv{
+  display: flex;
   border: solid 1px #ff45007d;
   margin-bottom: 3vh;
-  padding: 3px 15px;
+  padding: 7px 15px;
+  height: 15vh;
   border-radius: 10%;
 }
 
@@ -23,8 +25,8 @@
   border-radius: 10%;
   border-color: #ff45007d;
   border-width: 1px;
-  padding-bottom: inherit;
   width: 9vw;
+  font-size: large;
 }
 
 .removeButton{
@@ -36,7 +38,7 @@
   padding: 1px 1px;
   width: 9vw;
   margin-left: 2vw;
-  margin-bottom: 1vh;
+  /* margin-bottom: 1vh; */
 }
 
 .playerName:hover{

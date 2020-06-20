@@ -21,7 +21,7 @@ class PlayerList extends Component {
       const playersObject = localStorage.getItem('playerList')
       const players = JSON.parse(playersObject)
       const playersNames = Object.keys(players)
-      const list = playersNames.map(name => <li className='playerDv' ><button className='playerName' onClick={() => renderPlayerFromList(name)}><br />{name}</button> 
+      const list = playersNames.map(name => <li className='playerDiv' ><button className='playerName' onClick={() =>  renderPlayerFromList(name)}>View: {name}</button> 
       <button className='removeButton' onClick={() => this.removePlayerFromList(name)} >Remove Player From List</button> </li>)
       return list
     }
