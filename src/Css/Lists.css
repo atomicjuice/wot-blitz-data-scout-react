@@ -10,7 +10,7 @@
   margin-top: 20vh;
 }
 
-.playerDiv{
+.itemContainer{
   display: flex;
   border: solid 1px #ff45007d;
   margin-bottom: 3vh;
@@ -29,6 +29,18 @@
   font-size: large;
 }
 
+.clanName{
+  color: #fff;
+  background-color: #3E3B38DB;
+  border-radius: 10%;
+  border-color: #ff45007d;
+  border-width: 1px;
+  /* padding: 10px 10px; */
+  width: 9vw;
+  margin-left: 2vw;
+  margin-bottom: 1vh;
+}
+
 .removeButton{
   color: #fff;
   background-color: #3E3B38DB;
@@ -38,7 +50,6 @@
   padding: 1px 1px;
   width: 9vw;
   margin-left: 2vw;
-  /* margin-bottom: 1vh; */
 }
 
 .playerName:hover{
@@ -56,30 +67,3 @@
   background-color: red;
 }
 
-.clanName{
-  color: #fff;
-  background-color: #3E3B38DB;
-  border-radius: 10%;
-  border-color: #ff45007d;
-  border-width: 1px;
-  padding: 10px 10px;
-  width: 9vw;
-  margin-left: 2vw;
-  margin-bottom: 1vh;
-}
-
-.clanName{
-  color: #fff;
-  background-color: #3E3B38DB;
-  border-radius: 10%;
-  border-color: #ff45007d;
-  border-width: 1px;
-  padding: 10px 10px;
-  width: 9vw;
-  margin-left: 2vw;
-  margin-bottom: 1vh;
-}
-
-
-
-/* .removeButton{} */
