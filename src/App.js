@@ -1,3 +1,4 @@
+import './App.css'  
 import { Route } from 'react-router-dom'
 import UserSearch from './Components/UserSearch';
 import NavBar from './Components/NavBar'
@@ -15,7 +16,6 @@ import ClanComparisonSearch from './Components/ClanComparisonSearch'
 import ClanComparison from './Components/ClanComparison'
 import PlayerComparisonFromList from './Components/PlayerComparisonFromList'
 import ComparisonFromClanList from './Components/ComparisonFromClanList'
-import './App.css'
 import backgroundVideo from './video/openshot-edit2.mp4'
 
 

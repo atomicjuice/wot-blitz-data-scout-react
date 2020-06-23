@@ -21,7 +21,7 @@ class ClanList extends Component {
       const clansObject = localStorage.getItem('clanList')
       const clans = JSON.parse(clansObject)
       const clanNames = Object.keys(clans)
-      const list = clanNames.map(name => <li className='itemContainer' ><button className='clanName' onClick={() => renderClanFromList(name)}><br />{name}</button>
+      const list = clanNames.map(name => <li className='itemContainer' ><button className='clanName' onClick={() => renderClanFromList(name)}>View: {name}</button>
       <button className='removeButton' onClick={() => this.removeClanFromList(name)}>Remove Clan From List</button> </li> )
       return list
     }
