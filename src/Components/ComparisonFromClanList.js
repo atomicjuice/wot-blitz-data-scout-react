@@ -13,7 +13,7 @@ class ComparisonFromClanList extends Component {
       const clansObject = localStorage.getItem('clanList')
       const clans = JSON.parse(clansObject)
       const clanNames = Object.keys(clans)
-      const list = clanNames.map(name => <li className='clanName'><button onClick={() => setClanTwoComparisonIDfromList(name)}><br />{name}</button></li> )
+      const list = clanNames.map(name => <li className='itemContainer'><button className='clanNameComparison' onClick={() => setClanTwoComparisonIDfromList(name)}> Compare With: {name}</button></li> )
       return list
     }
   }

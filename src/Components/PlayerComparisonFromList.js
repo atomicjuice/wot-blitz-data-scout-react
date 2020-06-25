@@ -12,7 +12,7 @@ class PlayerComparisonFromList extends Component {
       const playersObject = localStorage.getItem('playerList')
       const players = JSON.parse(playersObject)
       const playersNames = Object.keys(players)
-      const list = playersNames.map(name => <li className='itemContainer'><button className='playerName' onClick={() => setPlayerTwoComparisonIDfromList(name)}>Compare With: <br/>{name}</button></li>)
+      const list = playersNames.map(name => <li className='itemContainer'><button className='playerNameComparison' onClick={() => setPlayerTwoComparisonIDfromList(name)}>Compare With: {name}</button></li>)
       return list
     }
   }
