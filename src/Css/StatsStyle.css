@@ -65,16 +65,19 @@
 .addToList:hover{
   color: aliceblue;
   background-color: #E56306E3;
+  transition: 0.2s;
 }
 
 .compareFromList:hover{
   color: aliceblue;
   background-color: #E56306E3;
+  transition: 0.2s;
 }
 
 .CompareBySearch:hover{
   color: aliceblue;
   background-color: #E56306E3;
+  transition: 0.2s;  
 }
 
 
