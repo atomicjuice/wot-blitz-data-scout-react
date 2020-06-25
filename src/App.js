@@ -205,7 +205,7 @@ class App extends Component {
           <source src={backgroundVideo} type="video/mp4" />
         </video>
         <Route exact path="/comparisonFromClanList" render={() => <ComparisonFromClanList setClanTwoComparisonIDfromList={this.setClanTwoComparisonIDfromList} />}></Route>
-        <Route exact path="/playerlistForComparison" render={() => <PlayerComparisonFromList setPlayerTwoComparisonIDfromList={this.setPlayerTwoComparisonIDfromList}/>}></Route>
+        <Route exact path="/playerComparisonFromList" render={() => <PlayerComparisonFromList setPlayerTwoComparisonIDfromList={this.setPlayerTwoComparisonIDfromList}/>}></Route>
         <Route exact path="/usersearch" render={() => <UserSearch setCurrentUser={this.setCurrentUser} apikey={this.state.apikey} />}></Route>
         <Route exact path="/clansearch" render={() => <ClanSearch setCurrentClan={this.setCurrentClan} apikey={this.state.apikey} />}></Route>
         <Route exact path="/playerstats" render={() => <PlayerStats setPlayerList={this.setPlayerList} player={this.state.currentPlayerInfo} setPlayerOneComparisonID={this.setPlayerOneComparisonID} compareFromPlayerList={this.compareFromPlayerList} />}></Route>
