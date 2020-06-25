@@ -125,7 +125,7 @@ class App extends Component {
     this.setState({
       playerOneID: id
     })
-    this.props.history.push('/playerlistForComparison')
+    this.props.history.push('/playerComparisonFromList')
   }
 
   comparisonFromClanList = id => {
