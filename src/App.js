@@ -2,7 +2,6 @@ import './App.css'
 import { Route } from 'react-router-dom'
 import UserSearch from './Components/UserSearch';
 import NavBar from './Components/NavBar'
-// import Container from '@material-ui/core/Container';
 import PlayerComparisonSearch from './Components/PlayerComparisonSearch'
 import PlayerComparison from './Components/PlayerComparison'
 import { withRouter } from 'react-router-dom'
@@ -17,6 +16,7 @@ import ClanComparison from './Components/ClanComparison'
 import PlayerComparisonFromList from './Components/PlayerComparisonFromList'
 import ComparisonFromClanList from './Components/ComparisonFromClanList'
 import backgroundVideo from './video/openshot-edit2.mp4'
+import HomeScreen from './Components/HomeScreen'
 
 
 class App extends Component {
@@ -204,6 +204,7 @@ class App extends Component {
         <video autoPlay loop muted id="video">
           <source src={backgroundVideo} type="video/mp4" />
         </video>
+        <Route exact path="/" render={() => <HomeScreen/> } ></Route>
         <Route exact path="/comparisonFromClanList" render={() => <ComparisonFromClanList setClanTwoComparisonIDfromList={this.setClanTwoComparisonIDfromList} />}></Route>
         <Route exact path="/playerComparisonFromList" render={() => <PlayerComparisonFromList setPlayerTwoComparisonIDfromList={this.setPlayerTwoComparisonIDfromList}/>}></Route>
         <Route exact path="/usersearch" render={() => <UserSearch setCurrentUser={this.setCurrentUser} apikey={this.state.apikey} />}></Route>
