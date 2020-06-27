@@ -8,28 +8,29 @@ background {
     width: 60;
 } */
 
-.typewriter {
+.title {
+    color: #E56306E3;
+    margin: 40vh;
     text-align: center;
     overflow: hidden;
     border-right: .15em solid black;
-    color: white;
     font-family: Courier New;
-    top: 30%;
+    /* top: 30%; */
     font-size: 40px;
     white-space: nowrap;
-    letter-spacing: .30em;
-    /* animation: typing 3.5s steps(30, end), blink-caret .75s step-end infinite; */
+    letter-spacing: .20em;
+    animation: typing 3.5s steps(30, end), blink-caret .75s step-end infinite;
+    animation-delay: 3s;
 }
 
 @keyframes typing {
     from { width:20% }
-    to { width: 80% }
+    to { width: 60% }
   }
 
 
   #title{
-      color: #E56306E3;
-      margin: 40vh;
+
       /* font-family: 'Krona One'; */
       font-size: xxx-large;
   }
