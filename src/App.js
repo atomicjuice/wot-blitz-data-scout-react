@@ -201,9 +201,9 @@ class App extends Component {
     return (
       <div className='container mainBackground'>
         <NavBar />
-        {/* <video autoPlay loop muted id="video">
+        <video autoPlay loop muted id="video">
           <source src={backgroundVideo} type="video/mp4" />
-        </video> */}
+        </video>
         <Route exact path="/" render={() => <HomeScreen/> } ></Route>
         <Route exact path="/comparisonFromClanList" render={() => <ComparisonFromClanList setClanTwoComparisonIDfromList={this.setClanTwoComparisonIDfromList} />}></Route>
         <Route exact path="/playerComparisonFromList" render={() => <PlayerComparisonFromList setPlayerTwoComparisonIDfromList={this.setPlayerTwoComparisonIDfromList}/>}></Route>
