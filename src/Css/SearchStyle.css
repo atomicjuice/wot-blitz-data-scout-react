@@ -1,3 +1,13 @@
+#playerSearchContext{
+    color: #f7f4f2e3;
+    text-align: center;
+    margin-top: 20vh;
+    font-family: monospace;
+    font-size: 15px;
+    letter-spacing: .15em;
+    font-weight: bold;
+  }
+
 .comparePlayerSearchbar {
     margin-top: 15vh;
     text-align: center;
@@ -14,7 +24,7 @@
 }
 
 .searchBar {
-    margin-top: 40vh;
+    margin-top: 20vh;
     text-align: center;
 }
 

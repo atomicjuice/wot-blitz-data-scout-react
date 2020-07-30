@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom'
-import '../Css/SearchStyle.css'
-import '../App.css'
+// import '../Css/SearchStyle.css'
+// import '../App.css'
 
 
 class UserSearch extends Component {
@@ -29,12 +29,13 @@ class UserSearch extends Component {
     fetch(`https://api.wotblitz.eu/wotb/account/list/?application_id=${this.props.apikey}&search=${name}`)
       .then(resp => resp.json())
       .then(json => {
-        if (json.data === undefined){
+        if (json.data === undefined) {
           alert('Player Not Found')
           this.props.history.push('/usersearch')
-        } else{
-        const id = json.data[0].account_id
-        this.fetchUserInfo(id)}
+        } else {
+          const id = json.data[0].account_id
+          this.fetchUserInfo(id)
+        }
       })
   }
 
@@ -42,12 +43,16 @@ class UserSearch extends Component {
 
   render() {
     return (
-      <div className='searchBar'> 
+      <div>
+        <p id='playerSearchContext'>Type in the name of the player you wish to scout</p>
+        <div className='searchBar'>
           <form onSubmit={this.handleSubmit} >
             <input name="nickname" type="text" placeholder="Insert Player Name" className='input'></input>
-            <input type="submit" value="Scout" className='button'/>
+            <input type="submit" value="Scout" className='button' />
           </form>
+        </div>
       </div>
+
     );
   }
 }
