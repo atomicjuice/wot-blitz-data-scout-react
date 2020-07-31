@@ -16,12 +16,16 @@ class ComparisonSearch extends Component {
 
   render() {
     return (
-      <div className='searchBar'>
-        <form onSubmit={this.handleSubmit}>
-          <input onChange={this.onChange} name="nickname" type="text" placeholder="Insert Player Name" className='input'></input>
-          <input type="submit" value="Scout" className='button'/>
-        </form>
+      <div>
+        <p id='playerComparisonSearchContext'>Type in the name of the player you wish to compare</p>
+        <div className='searchBar'>
+          <form onSubmit={this.handleSubmit}>
+            <input onChange={this.onChange} name="nickname" type="text" placeholder="Insert Player Name" className='input'></input>
+            <input type="submit" value="Scout" className='button' />
+          </form>
+        </div>
       </div>
+
     );
   }
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom'
-// import '../Css/SearchStyle.css'
-// import '../App.css'
+import '../Css/SearchStyle.css'
+import '../App.css'
 
 
 class UserSearch extends Component {

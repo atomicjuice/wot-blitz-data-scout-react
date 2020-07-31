@@ -1,18 +1,40 @@
+#playerComparisonContextMaster{
+  color: #ffffffe3;
+  text-align: center;
+  margin-top: 12vh;
+  font-family: monospace;
+  font-size: 15px;
+  letter-spacing: .15em;
+  font-weight: bold;
+}
+
+.playerComparisonContext{
+  color: #ffffffe3;
+  text-align: center;
+  font-family: monospace;
+  font-size: 15px;
+  letter-spacing: .15em;
+  font-weight: bold;
+}
+
+#all{
+  margin: 10px 50px 0 50px;
+}
+
 .playerComparison{
   display:grid;
   grid-template-columns: auto auto auto ;
-  /* text-align: center; */
 }
 
 .player1{
   text-align: center;
   border-radius: 20px;
   background-color: #cacaca9e;
-  margin-top: 22vh;
+  margin-top: 5vh;
   margin-bottom: 2vh;
-  margin-right: 11vw;
+  /* margin-right: 2vw; */
   color: aliceblue;
-  padding: 0px 4vw 20px 4vw;
+  padding: 0px 1vw 20px 1vw;
   grid-column-start: 1;
 }
 
@@ -20,29 +42,25 @@
   text-align: center;
   border-radius: 20px;
   background-color: #cacaca9e;
-  margin-top: 22vh;
+  margin-top: 5vh;
   margin-bottom: 2vh;
-  margin-left: 11vw;
+  /* margin-left: 2vw; */
   color: aliceblue;
-  padding: 0px 4vw 20px 4vw;
+  padding: 0px 1vw 20px 1vw;
   grid-column-start: 3;
 }
 
 .green{
   color: green;
+  letter-spacing: .15em;
+  font-weight: bold;
 }
 
 .red{
   color: #bb2121;
+  letter-spacing: .15em;
+  font-weight: bold;
 }
-
-/* .graph{
-  position: relative;
-  height: 800px;
-  width: 400px;
-  background: #DDDDDD;
-  z-index: 3;
-} */
 
 .graph-wrapper{
   text-align: -webkit-center;
