@@ -17,7 +17,7 @@ class ComparisonSearch extends Component {
   render() {
     return (
       <div>
-        <p id='playerComparisonSearchContext'>Type in the name of the player you wish to compare</p>
+        <p className='comparisonSearchContext'>Type in the name of the player you wish to compare with</p>
         <div className='searchBar'>
           <form onSubmit={this.handleSubmit}>
             <input onChange={this.onChange} name="nickname" type="text" placeholder="Insert Player Name" className='input'></input>

@@ -20,6 +20,7 @@ class PlayerComparisonFromList extends Component {
 
     return (
       <div className='playerList'>
+        <p className='selectFromListContext'>Select a Player you wish to compare with</p>
         {this.checkList()}
       </div>
     );

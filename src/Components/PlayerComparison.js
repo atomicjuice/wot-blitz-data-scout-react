@@ -34,7 +34,7 @@ class PlayerComparison extends Component {
       <div id='all'>
         <p id='playerComparisonContextMaster'>Here are the players compared side by side. for quick reference,</p>
         <p className='playerComparisonContext'> each player's stats have been colour coded to denote from a
-        glance which player has the higher or better stat,</p>
+        glance which player has a higher or better stat,</p>
         <p className='playerComparisonContext'>
           <span style={{ color: "green" }} >Green is higher/better </span>
          and <span style={{ color: "red" }}>red is lower/worse</span>

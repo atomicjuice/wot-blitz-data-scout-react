@@ -21,6 +21,7 @@ class ComparisonFromClanList extends Component {
   render() {
     return (
       <div className='clanList'>
+        <p className='selectFromListContext'>Select a Player you wish to compare with</p>
         {this.checkList()}
       </div>
     );

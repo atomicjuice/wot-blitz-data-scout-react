@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../Css/Lists.css'
-import {withRouter} from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 
 
 class ClanList extends Component {
@@ -16,22 +16,31 @@ class ClanList extends Component {
   checkList = () => {
     if (!localStorage.getItem('clanList') || localStorage.getItem('clanList') === "{}") {
       return <h2>Your clan list is empty, search clans to add them to your list</h2>
-    }else{
+    } else {
       const renderClanFromList = this.props.renderClanFromList
       const clansObject = localStorage.getItem('clanList')
       const clans = JSON.parse(clansObject)
       const clanNames = Object.keys(clans)
       const list = clanNames.map(name => <li className='itemContainer' ><button className='clanName' onClick={() => renderClanFromList(name)}>View: {name}</button>
-      <button className='removeButton' onClick={() => this.removeClanFromList(name)}>Remove Clan From List</button> </li> )
+        <button className='removeButton' onClick={() => this.removeClanFromList(name)}>Remove Clan From List</button> </li>)
       return list
     }
   }
 
   render() {
     return (
-      <div className='clanList'>
-        {this.checkList()}
+      <div>
+        <p className='listContextMaster'>
+          This list is where you can select to view any one of the players</p>
+        <p className='listContext' > which you previously decided to add to your list,</p>
+        <p className='listContext'>
+          or if you wish you can also remove players from your list as well.
+        </p>
+        <div className='clanList'>
+          {this.checkList()}
+        </div>
       </div>
+
     )
   }
 }

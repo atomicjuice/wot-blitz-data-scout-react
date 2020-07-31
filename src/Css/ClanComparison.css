@@ -2,7 +2,7 @@
   text-align: center;
   border-radius: 20px;
   background-color: #cacaca9e;
-  margin-top: 22vh;
+  margin-top: 10vh;
   margin-bottom: 2vh;
   margin-left: 3vw;
   color: aliceblue;
@@ -17,7 +17,7 @@
 }
 
 .clanTwoCard{
-  margin-top: 22vh;
+  margin-top: 10vh;
   grid-column-start: 3;
   text-align: center;
   border-radius: 20px;

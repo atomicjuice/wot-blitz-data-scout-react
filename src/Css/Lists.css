@@ -1,13 +1,40 @@
+.listContextMaster{
+  color: #ffffffe3;
+  text-align: center;
+  font-family: monospace;
+  margin-top: 10vh;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.listContext{
+  color: #ffffffe3;
+  text-align: center;
+  font-family: monospace;
+  font-size: 15px;
+  font-weight: bold;
+}
+
 .clanList{
   list-style-type: none;
   text-align: center;
-  margin-top: 20vh;
+  margin-top: 10vh;
 }
 
 .playerList{
   list-style-type: none;
   text-align: center;
-  margin-top: 20vh;
+  margin-top: 10vh;
+}
+
+.selectFromListContext{
+  color: #ffffffe3;
+  text-align: center;
+  font-family: monospace;
+  margin-bottom: 10vh;
+  font-size: 15px;
+  letter-spacing: .15em;
+  font-weight: bold;
 }
 
 .itemContainer{

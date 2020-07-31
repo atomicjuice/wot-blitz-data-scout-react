@@ -18,7 +18,7 @@
     font-weight: bold;
 }
 
-#playerComparisonSearchContext {
+.comparisonSearchContext {
     color: #f7f4f2e3;
     text-align: center;
     margin-top: 20vh;

@@ -32,7 +32,6 @@
   background-color: #cacaca9e;
   margin-top: 5vh;
   margin-bottom: 2vh;
-  /* margin-right: 2vw; */
   color: aliceblue;
   padding: 0px 1vw 20px 1vw;
   grid-column-start: 1;
@@ -44,7 +43,6 @@
   background-color: #cacaca9e;
   margin-top: 5vh;
   margin-bottom: 2vh;
-  /* margin-left: 2vw; */
   color: aliceblue;
   padding: 0px 1vw 20px 1vw;
   grid-column-start: 3;
