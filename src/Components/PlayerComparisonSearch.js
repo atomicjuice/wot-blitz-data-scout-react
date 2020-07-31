@@ -9,8 +9,13 @@ class ComparisonSearch extends Component {
     fetch(`https://api.wotblitz.eu/wotb/account/list/?application_id=${this.props.apikey}&search=${e.target[0].value}`)
       .then(resp => resp.json())
       .then(json => {
-        const user = json.data[0]
-        this.props.setPlayerTwoComparisonID(user.nickname, user.account_id)
+        if (json.data[0] === undefined) {
+          alert('Player Not Found')
+        }
+          else{
+            const user = json.data[0]
+            this.props.setPlayerTwoComparisonID(user.nickname, user.account_id)
+          }
       })
   }
 

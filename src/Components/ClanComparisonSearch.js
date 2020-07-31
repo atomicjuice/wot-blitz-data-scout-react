@@ -11,11 +11,15 @@ class ClanComparisonSearch extends Component {
     fetch(`https://api.wotblitz.eu/wotb/clans/list/?application_id=${this.props.apikey}&search=${name}`)
       .then(resp => resp.json())
       .then(json => {
-        const ID = json.data[0].clan_id
-        this.setState({
-          id: ID
-        })
-        this.props.setClanTwoComparisonID(name, ID)
+        if (json.data[0] === undefined) {
+          alert('Clan Not Found')
+        } else {
+          const ID = json.data[0].clan_id
+          this.setState({
+            id: ID
+          })
+          this.props.setClanTwoComparisonID(name, ID)
+        }
       })
   }
 

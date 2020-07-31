@@ -17,7 +17,7 @@ class ClanStats extends Component {
       const clan = localStorage.getItem('clanList')
       const parsedClan = JSON.parse(clan)
       this.props.setClanList(parsedClan)
-      alert('Player Added To List')
+      alert('Clan Added To List')
     }
     else {
       let retreivedData = localStorage.getItem('clanList')
@@ -25,7 +25,7 @@ class ClanStats extends Component {
       clanArray[name] = id
       localStorage.setItem('clanList', JSON.stringify(clanArray))
       this.props.setClanList(clanArray)
-      alert('Player Added To List')
+      alert('Clan Added To List')
     }
   }
 

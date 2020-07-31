@@ -31,10 +31,10 @@ class ClanList extends Component {
     return (
       <div>
         <p className='listContextMaster'>
-          This list is where you can select to view any one of the players</p>
+          This list is where you can select to view any one of the clans</p>
         <p className='listContext' > which you previously decided to add to your list,</p>
         <p className='listContext'>
-          or if you wish you can also remove players from your list as well.
+          or if you wish you can also remove a clan from your list as well.
         </p>
         <div className='clanList'>
           {this.checkList()}
