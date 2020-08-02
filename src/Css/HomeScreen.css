@@ -13,7 +13,7 @@ background {
   letter-spacing: .15em;
 }
 
-.title {
+#title {
     color: #E56306E3;
     font-weight: 600;
     font-family: monospace; /* Web-safe typewriter-like font */
