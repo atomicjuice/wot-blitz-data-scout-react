@@ -15,7 +15,7 @@ class PlayerList extends Component {
 
   checkList = () => {
     if (!localStorage.getItem('playerList') || localStorage.getItem('playerList') === "{}") {
-      return <h2>Your player list is empty, search players to add them to your list</h2>
+      return <h2 className='emptyList' >Your player list is empty, search players to add them to your list</h2>
     } else {
       const renderPlayerFromList = this.props.renderPlayerFromList
       const playersObject = localStorage.getItem('playerList')

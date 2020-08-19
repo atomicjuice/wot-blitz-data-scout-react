@@ -19,8 +19,8 @@
   z-index: -1;
   width: 100%;
   filter: 
-  blur(4px) 
-  opacity(90%);
+  /* blur(4px)  */
+  /* opacity(90%); */
 }
 
 

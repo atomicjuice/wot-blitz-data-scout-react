@@ -6,7 +6,6 @@ import * as serviceWorker from './serviceWorker';
 import { Route, BrowserRouter as Router} from 'react-router-dom'
 
 ReactDOM.render(
-  
     <React.StrictMode>
       <Router>
         <Route path="/" component={App} />

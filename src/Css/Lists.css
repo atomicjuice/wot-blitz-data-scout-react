@@ -27,6 +27,10 @@
   margin-top: 10vh;
 }
 
+.emptyList{
+  color: #E56306E3;
+}
+
 .selectFromListContext{
   color: #ffffffe3;
   text-align: center;

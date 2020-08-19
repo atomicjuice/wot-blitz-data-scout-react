@@ -15,7 +15,7 @@ class HomeScreen extends Component {
             p.id = 'title'
             p.innerText = 'World of Tanks Blitz Data Scout'
             home.appendChild(p)
-        }, 2000)
+        }, 1500)
 
     }
 

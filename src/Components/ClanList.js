@@ -15,7 +15,7 @@ class ClanList extends Component {
 
   checkList = () => {
     if (!localStorage.getItem('clanList') || localStorage.getItem('clanList') === "{}") {
-      return <h2>Your clan list is empty, search clans to add them to your list</h2>
+      return <h2 className='emptyList' >Your clan list is empty, search clans to add them to your list</h2>
     } else {
       const renderClanFromList = this.props.renderClanFromList
       const clansObject = localStorage.getItem('clanList')
