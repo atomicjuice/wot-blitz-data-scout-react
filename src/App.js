@@ -199,7 +199,6 @@ class App extends Component {
 
   render() {
     console.log('hello');
-    return (
       <div className='container mainBackground'>
         <NavBar />
         <video autoPlay loop muted id="video">
@@ -219,7 +218,7 @@ class App extends Component {
         <Route exact path="/clancomparisonsearch" render={() => <ClanComparisonSearch apikey={this.state.apikey} setClanTwoComparisonID={this.setClanTwoComparisonID} />} />
         <Route exact path="/clancomparison" render={() => <ClanComparison currentClanInfo={this.state.currentClanInfo} clanTocompareinfo={this.state.clanTocompareinfo} />}></Route>
       </div>
-    );
+
   }
 }
 
