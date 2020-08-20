@@ -4,7 +4,7 @@ import UserSearch from './Components/UserSearch';
 import NavBar from './Components/NavBar'
 import PlayerComparisonSearch from './Components/PlayerComparisonSearch'
 import PlayerComparison from './Components/PlayerComparison'
-import { withRouter } from 'react-router-dom'
+import { withRouter, Switch } from 'react-router-dom'
 import React, { Component } from 'react';
 import ClanSearch from './Components/ClanSearch';
 import ClanStats from './Components/ClanStats'
