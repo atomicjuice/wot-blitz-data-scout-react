@@ -1,10 +1,10 @@
 import './App.css'  
 import { Route } from 'react-router-dom'
 import UserSearch from './Components/UserSearch';
-import NavBar from './Components/NavBar'
+import NavBar from './NavBar'
 import PlayerComparisonSearch from './Components/PlayerComparisonSearch'
 import PlayerComparison from './Components/PlayerComparison'
-import { withRouter, Switch } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 import React, { Component } from 'react';
 import ClanSearch from './Components/ClanSearch';
 import ClanStats from './Components/ClanStats'
@@ -198,14 +198,13 @@ class App extends Component {
   }
 
   render() {
-    console.log('hello');
     return (
       <div className='container mainBackground'>
         <NavBar />
         <video autoPlay loop muted id="video">
           <source src={backgroundVideo} type="video/mp4" />
         </video>
-        <Switch>
+
         <Route exact path="/" component={HomeScreen}/>
         <Route exact path="/comparisonFromClanList" render={() => <ComparisonFromClanList setClanTwoComparisonIDfromList={this.setClanTwoComparisonIDfromList} />} />
         <Route exact path="/playerComparisonFromList"><PlayerComparisonFromList setPlayerTwoComparisonIDfromList={this.setPlayerTwoComparisonIDfromList}/></Route>
@@ -219,7 +218,6 @@ class App extends Component {
         <Route exact path="/playerComparisonSearch" render={() => <PlayerComparisonSearch setPlayerTwoComparisonID={this.setPlayerTwoComparisonID} apikey={this.state.apikey} />}></Route>
         <Route exact path="/clancomparisonsearch" render={() => <ClanComparisonSearch apikey={this.state.apikey} setClanTwoComparisonID={this.setClanTwoComparisonID} />} />
         <Route exact path="/clancomparison" render={() => <ClanComparison currentClanInfo={this.state.currentClanInfo} clanTocompareinfo={this.state.clanTocompareinfo} />}></Route>
-        </Switch>
       </div>
     );
   }
