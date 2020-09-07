@@ -15,7 +15,8 @@ import ClanComparisonSearch from './Components/ClanComparisonSearch'
 import ClanComparison from './Components/ClanComparison'
 import PlayerComparisonFromList from './Components/PlayerComparisonFromList'
 import ComparisonFromClanList from './Components/ComparisonFromClanList'
-// import backgroundVideo from './video/openshot 10 seconds.mp4'
+import backgroundVideo from './video/openshot 10 seconds.mp4'
+import backgroundImage from './pictures/World-of-Tanks-winter-snow_1920x1080.jpg'
 import HomeScreen from './Components/HomeScreen'
 
 
@@ -199,8 +200,9 @@ class App extends Component {
 
   render() {
     return (
-      <div className='container mainBackground'>
+      <div className='container'>
         <NavBar />
+        <img className='mainBackground' src={backgroundImage} />
         {/* <video autoPlay loop muted id="video">
           <source src={backgroundVideo} type="video/mp4" />
         </video> */}

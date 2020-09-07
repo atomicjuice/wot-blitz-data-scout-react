@@ -1,20 +1,20 @@
 #playerSearchContext {
-    color: #f7f4f2e3;
+    color: #E56206;
     text-align: center;
     margin-top: 20vh;
     font-family: monospace;
-    font-size: 15px;
-    letter-spacing: .15em;
+    font-size: 20px;
+    letter-spacing: .10em;
     font-weight: bold;
 }
 
 #clanSearchContext {
-    color: #f7f4f2e3;
+    color: #E56206;
     text-align: center;
     margin-top: 20vh;
     font-family: monospace;
-    font-size: 15px;
-    letter-spacing: .15em;
+    font-size: 20px;
+    letter-spacing: .10em;
     font-weight: bold;
 }
 
@@ -51,9 +51,8 @@
 .input {
     border-color: #6F6A68;
     width: 100%;
-    caret-color: #E56206;
+    caret-color: #3a3735;
     border-width: 0 0 3px;
-    /* border-width: 0 3px 0 3px; */
     font-size: 22px;
     background: transparent;
     line-height: 2.0;
@@ -62,7 +61,7 @@
 
 ::placeholder {
     color: rgb(229, 99, 6);
-    opacity: 0.6;
+    opacity: 1;
 }
 
 .button {

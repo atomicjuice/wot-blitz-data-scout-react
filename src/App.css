@@ -1,11 +1,11 @@
-#background-video{
+/* #background-video{
   height: 100%;
   width: 100%;
   float: left;
   top: 0;
   padding: none;
   position: fixed; 
-}
+} */
 
 .container{
   display: grid;
@@ -22,12 +22,9 @@
 } */
 
 .mainBackground{
-  background-image: url(https://images2.alphacoders.com/711/711084.jpg);
-  background-color: #cccccc;
-  background-size: cover;
-  min-height: 100vh;
-  min-width: 100vw;
-  background-attachment: fixed;
+  position: fixed;
+  z-index: -1;
+  width: 100%;
 }
 
 
@@ -35,7 +32,7 @@
   position: fixed;
   z-index: -1;
   width: 100%;
-  filter: 
+  /* filter:  */
   /* blur(4px)  */
   /* opacity(90%); */
 }
