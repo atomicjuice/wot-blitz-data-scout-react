@@ -15,7 +15,7 @@ import ClanComparisonSearch from './Components/ClanComparisonSearch'
 import ClanComparison from './Components/ClanComparison'
 import PlayerComparisonFromList from './Components/PlayerComparisonFromList'
 import ComparisonFromClanList from './Components/ComparisonFromClanList'
-import backgroundVideo from './video/openshot-edit2.mp4'
+// import backgroundVideo from './video/openshot 10 seconds.mp4'
 import HomeScreen from './Components/HomeScreen'
 
 
@@ -201,9 +201,9 @@ class App extends Component {
     return (
       <div className='container mainBackground'>
         <NavBar />
-        <video autoPlay loop muted id="video">
+        {/* <video autoPlay loop muted id="video">
           <source src={backgroundVideo} type="video/mp4" />
-        </video>
+        </video> */}
 
         <Route exact path="/" component={HomeScreen}/>
         <Route exact path="/comparisonFromClanList" render={() => <ComparisonFromClanList setClanTwoComparisonIDfromList={this.setClanTwoComparisonIDfromList} />} />

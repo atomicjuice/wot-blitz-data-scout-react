@@ -13,6 +13,23 @@
   grid-template-rows: 10vh 10vh auto auto;
 }
 
+/* .mainBackground{
+  background-image: url(../src/pictures/World-of-Tanks-winter-snow_1920x1080.jpg);
+  background-size: cover;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-attachment: fixed;
+} */
+
+.mainBackground{
+  background-image: url(https://images2.alphacoders.com/711/711084.jpg);
+  background-color: #cccccc;
+  background-size: cover;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-attachment: fixed;
+}
+
 
 #video {
   position: fixed;
