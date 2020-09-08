@@ -16,7 +16,7 @@ import ClanComparison from './Components/ClanComparison'
 import PlayerComparisonFromList from './Components/PlayerComparisonFromList'
 import ComparisonFromClanList from './Components/ComparisonFromClanList'
 import backgroundVideo from './video/openshot 10 seconds.mp4'
-import backgroundImage from './pictures/World-of-Tanks-winter-snow_1920x1080.jpg'
+import backgroundImage from './pictures/772660.jpg'
 import HomeScreen from './Components/HomeScreen'
 
 
@@ -126,13 +126,20 @@ class App extends Component {
     this.setState({
       playerOneID: id
     })
+
+      if (localStorage.getItem('playerList') === '{}' || !localStorage.getItem('playerList')) {
+        return alert('Your player list is empty, search players to add them to your list')
+      }
     this.props.history.push('/playerComparisonFromList')
   }
 
   comparisonFromClanList = id => {
     this.setState({
-      playerOneID: id
+      currentClanID: id
     })
+    if (localStorage.getItem('clanList') === '{}' || !localStorage.getItem('clanList')) {
+      return alert('Your clan list is empty, search players to add them to your list')
+    }
     this.props.history.push('/comparisonFromClanList')
   }
 

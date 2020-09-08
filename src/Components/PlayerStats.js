@@ -41,18 +41,18 @@ class PlayerStats extends Component {
     return (
       <div className='playerStats'>
         <div className='playerCard'>
-          <h1>Player name: {nickname}</h1>
-          <p>Battles: {info.battles}</p>
+          <h1 style={{color:'#E56306E3'}} >Player name: {nickname}</h1>
+          <h2 className="individualStat" >Battles: {info.battles}</h2>
           <br></br>
-          <p>Won: {info.wins}</p>
+          <h2 className="individualStat" >Won: {info.wins}</h2>
           <br></br>
-          <p>Losses: {info.losses}</p>
+          <h2 className="individualStat" >Losses: {info.losses}</h2>
           <br></br>
-          <p>Won And Survived: {info.win_and_survived}</p>
+          <h2 className="individualStat" >Won And Survived: {info.win_and_survived}</h2>
           <br></br>
-          <p>Destroyed: {info.frags}</p>
+          <h2 className="individualStat" >Destroyed: {info.frags}</h2>
           <br></br>
-          <p>Accuracy: {accuracy.toFixed(2)}%</p>
+          <h2 className="individualStat" >Accuracy: {accuracy.toFixed(2)}%</h2>
           <br></br>
           <div className='buttons'>
             <button className="CompareBySearch" onClick={() => this.setPlayerOneComparisonID(player.account_id)}>Compare Players By Search</button>

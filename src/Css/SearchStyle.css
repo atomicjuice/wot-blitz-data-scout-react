@@ -1,7 +1,7 @@
 #playerSearchContext {
     color: #E56206;
     text-align: center;
-    margin-top: 20vh;
+    margin-top: 15vh;
     font-family: monospace;
     font-size: 20px;
     letter-spacing: .10em;
@@ -11,7 +11,7 @@
 #clanSearchContext {
     color: #E56206;
     text-align: center;
-    margin-top: 20vh;
+    margin-top: 15vh;
     font-family: monospace;
     font-size: 20px;
     letter-spacing: .10em;
@@ -19,11 +19,11 @@
 }
 
 .comparisonSearchContext {
-    color: #f7f4f2e3;
+    color: #E56206;
     text-align: center;
-    margin-top: 20vh;
+    margin-top: 15vh;
     font-family: monospace;
-    font-size: 15px;
+    font-size: 20px;
     letter-spacing: .15em;
     font-weight: bold;
 }
@@ -49,9 +49,9 @@
 }
 
 .input {
-    border-color: #6F6A68;
+    border-color: #E56206;
     width: 100%;
-    caret-color: #3a3735;
+    caret-color: #E56206;
     border-width: 0 0 3px;
     font-size: 22px;
     background: transparent;
@@ -68,7 +68,7 @@
     border-radius: 14%;
     height: 40px;
     width: 120px;
-    color: #AA642F;
+    color: #E56206;
     background-color: #3E3B3852;
     border-width: 1px;
     margin-top: 10px;
@@ -78,6 +78,6 @@
 
 .button:hover {
     transition: 0.3s;
-    background-color: rgba(229, 99, 6, 0.65);
+    background-color: #E56206;
     color: white;
 }

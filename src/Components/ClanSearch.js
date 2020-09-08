@@ -33,7 +33,7 @@ class ClanSearch extends Component {
     fetch(`https://api.wotblitz.eu/wotb/clans/list/?application_id=${this.props.apikey}&search=${name}`)
       .then(resp => resp.json())
       .then(json => {
-        if (json.data[0] === undefined) {
+        if (json.data === undefined || json.data[0] === undefined) {
           alert('Clan Not Found')
         }
         else {

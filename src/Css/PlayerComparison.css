@@ -1,18 +1,18 @@
 #playerComparisonContextMaster{
-  color: #ffffffe3;
+  color: #FF6F09E3;
   text-align: center;
   margin-top: 12vh;
   font-family: monospace;
-  font-size: 15px;
+  font-size: 18px;
   letter-spacing: .15em;
   font-weight: bold;
 }
 
 .playerComparisonContext{
-  color: #ffffffe3;
+  color: #FF6F09E3;
   text-align: center;
   font-family: monospace;
-  font-size: 15px;
+  font-size: 18px;
   letter-spacing: .15em;
   font-weight: bold;
 }
@@ -29,7 +29,7 @@
 .player1{
   text-align: center;
   border-radius: 20px;
-  background-color: #cacaca9e;
+  background-color: #cacacaf7;
   margin-top: 5vh;
   margin-bottom: 2vh;
   color: aliceblue;
@@ -40,7 +40,7 @@
 .player2{
   text-align: center;
   border-radius: 20px;
-  background-color: #cacaca9e;
+  background-color: #cacacaf7;
   margin-top: 5vh;
   margin-bottom: 2vh;
   color: aliceblue;
@@ -49,13 +49,13 @@
 }
 
 .green{
-  color: green;
+  color: #20b920;;
   letter-spacing: .15em;
   font-weight: bold;
 }
 
 .red{
-  color: #bb2121;
+  color: #e81b1b;;
   letter-spacing: .15em;
   font-weight: bold;
 }

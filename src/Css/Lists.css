@@ -1,17 +1,17 @@
 .listContextMaster{
-  color: #ffffffe3;
+  color: #E56306E3;
   text-align: center;
   font-family: monospace;
   margin-top: 10vh;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: bold;
 }
 
 .listContext{
-  color: #ffffffe3;
+  color: #E56306E3;
   text-align: center;
   font-family: monospace;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: bold;
 }
 
@@ -32,22 +32,22 @@
 }
 
 .selectFromListContext{
-  color: #ffffffe3;
+  color: #E56206;
   text-align: center;
   font-family: monospace;
   margin-bottom: 10vh;
-  font-size: 15px;
+  font-size: 20px;
   letter-spacing: .15em;
   font-weight: bold;
 }
 
-.itemContainer{
+/* .itemContainer{
   display: flex;
   border: solid 1px #ff45007d;
   margin-bottom: 3vh;
   padding: 0px 15px;
   border-radius: 10%;
-}
+} */
 
 .removeButton{
   margin: 7px 0px;
@@ -84,8 +84,8 @@
   border-radius: 10%;
   border-color: #ff45007d;
   border-width: 1px;
-  width: 33vw;
-  height: 7vh;
+  width: 40vw;
+  height: 10vh;
   font-size: large;
 }
 
@@ -108,8 +108,8 @@
   border-radius: 10%;
   border-color: #ff45007d;
   border-width: 1px;
-  width: 33vw;
-  height: 7vh;
+  width: 40vw;
+  height: 10vh;
   font-size: large;
 }
 
