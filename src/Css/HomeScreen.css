@@ -1,13 +1,17 @@
-background {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+#mainContext{
+  text-align: center;
+  color: #E56306;
+  font-size: 20px;
+  margin-top: 5vh;
+  font-weight: bold;
+  letter-spacing: .10em;
+  
 }
 
 .context{
   color: #E56306E3;
   text-align: center;
-  margin-top: 20vh;
+  margin-top: 10vh;
   font-family: monospace;
   font-size: 50px;
   letter-spacing: .15em;
@@ -15,16 +19,17 @@ background {
 
 #title {
     color: #E56306E3;
-    font-weight: 600;
+    font-weight: 900;
     font-family: monospace; /* Web-safe typewriter-like font */
     font-size: 35px;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .15em solid orange; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
-    margin: 20vh auto; /* Gives that scrolling effect as the typing happens */
+    margin-top: 5vh; /* Gives that scrolling effect as the typing happens */
+    margin-bottom: 0vh;
     letter-spacing: .15em; /* Adjust as needed */
     animation: 
-      typing 3.0s steps(20, end),
+      typing 0.8s steps(20, end),
       blinking-cursor .8s step-end infinite;
   }
   
