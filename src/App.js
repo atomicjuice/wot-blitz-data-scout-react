@@ -15,7 +15,7 @@ import ClanComparisonSearch from './Components/ClanComparisonSearch'
 import ClanComparison from './Components/ClanComparison'
 import PlayerComparisonFromList from './Components/PlayerComparisonFromList'
 import ComparisonFromClanList from './Components/ComparisonFromClanList'
-import backgroundVideo from './video/openshot 10 seconds.mp4'
+// import backgroundVideo from './video/openshot 10 seconds.mp4'
 import backgroundImage from './pictures/772660.jpg'
 import HomeScreen from './Components/HomeScreen'
 
@@ -209,7 +209,7 @@ class App extends Component {
     return (
       <div className='container'>
         <NavBar />
-        <img className='mainBackground' src={backgroundImage} />
+        <img className='mainBackground' alt='' src={backgroundImage} />
         {/* <video autoPlay loop muted id="video">
           <source src={backgroundVideo} type="video/mp4" />
         </video> */}
