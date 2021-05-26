@@ -1,4 +1,4 @@
-import './App.css'  
+import './App.css'
 import { Route } from 'react-router-dom'
 import UserSearch from './Components/UserSearch';
 import NavBar from './NavBar'
@@ -17,6 +17,7 @@ import PlayerComparisonFromList from './Components/PlayerComparisonFromList'
 import ComparisonFromClanList from './Components/ComparisonFromClanList'
 // import backgroundVideo from './video/openshot 10 seconds.mp4'
 import backgroundImage from './pictures/772660.jpg'
+import backgroundImage2 from './pictures/World-of-Tanks-winter-snow_1920x1080.jpg'
 import HomeScreen from './Components/HomeScreen'
 
 
@@ -76,7 +77,7 @@ class App extends Component {
     const clanList = localStorage.getItem('clanList')
     const clanListParsed = JSON.parse(clanList)
     const clanID = clanListParsed[name]
-    
+
     fetch(`https://api.wotblitz.eu/wotb/clans/info/?application_id=${this.state.apikey}&clan_id=${clanID}`)
       .then(resp => resp.json())
       .then(json => {
@@ -103,7 +104,7 @@ class App extends Component {
         localStorage.setItem('comparisonPlayer', JSON.stringify(info))
         this.props.history.push('/PlayerComparison')
       })
-    }
+  }
 
   setPlayerTwoComparisonID = (nickname, id) => {
     this.setState({
@@ -127,9 +128,9 @@ class App extends Component {
       playerOneID: id
     })
 
-      if (localStorage.getItem('playerList') === '{}' || !localStorage.getItem('playerList')) {
-        return alert('Your player list is empty, search players to add them to your list')
-      }
+    if (localStorage.getItem('playerList') === '{}' || !localStorage.getItem('playerList')) {
+      return alert('Your player list is empty, search players to add them to your list')
+    }
     this.props.history.push('/playerComparisonFromList')
   }
 
@@ -209,14 +210,14 @@ class App extends Component {
     return (
       <div className='container'>
         <NavBar />
-        <img className='mainBackground' alt='' src={backgroundImage} />
+        <img className='mainBackground' alt='' src={backgroundImage2} />
         {/* <video autoPlay loop muted id="video">
           <source src={backgroundVideo} type="video/mp4" />
         </video> */}
 
-        <Route exact path="/" component={HomeScreen}/>
+        <Route exact path="/" component={HomeScreen} />
         <Route exact path="/comparisonFromClanList" render={() => <ComparisonFromClanList setClanTwoComparisonIDfromList={this.setClanTwoComparisonIDfromList} />} />
-        <Route exact path="/playerComparisonFromList"><PlayerComparisonFromList setPlayerTwoComparisonIDfromList={this.setPlayerTwoComparisonIDfromList}/></Route>
+        <Route exact path="/playerComparisonFromList"><PlayerComparisonFromList setPlayerTwoComparisonIDfromList={this.setPlayerTwoComparisonIDfromList} /></Route>
         <Route exact path="/usersearch" render={() => <UserSearch setCurrentUser={this.setCurrentUser} apikey={this.state.apikey} />}></Route>
         <Route exact path="/clansearch" render={() => <ClanSearch setCurrentClan={this.setCurrentClan} apikey={this.state.apikey} />}></Route>
         <Route exact path="/playerstats" render={() => <PlayerStats setPlayerList={this.setPlayerList} player={this.state.currentPlayerInfo} setPlayerOneComparisonID={this.setPlayerOneComparisonID} compareFromPlayerList={this.compareFromPlayerList} />}></Route>

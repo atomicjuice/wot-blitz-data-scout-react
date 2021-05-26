@@ -41,14 +41,6 @@
   font-weight: bold;
 }
 
-/* .itemContainer{
-  display: flex;
-  border: solid 1px #ff45007d;
-  margin-bottom: 3vh;
-  padding: 0px 15px;
-  border-radius: 10%;
-} */
-
 .removeButton{
   margin: 7px 0px;
   color: #fff;
