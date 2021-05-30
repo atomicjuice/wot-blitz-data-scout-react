@@ -19,12 +19,8 @@ ul {
 }
 
 a{
-  /* color: #377ca7; */
   color:white;
-  /* display: block; */
-  /* padding: 0rem 2rem; */
   text-decoration: none;
-  /* width: 15vw; */
 }
 
 a:hover{
