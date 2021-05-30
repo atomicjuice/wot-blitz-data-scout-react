@@ -24,13 +24,10 @@ a{
 }
 
 a:hover{
-  /* color: white; */
   color: #E56206;
-  /* background-color: #58648E; */
 }
 
 .appName{
-  /* color: white; */
   color: whitesmoke;
   width: 100vw;
   font-size: x-large;

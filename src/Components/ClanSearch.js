@@ -9,7 +9,6 @@ class ClanSearch extends Component {
     clan: null
   }
 
-
   renderClanStats = () => {
     this.props.history.push('/clanstats')
   }
@@ -46,7 +45,6 @@ class ClanSearch extends Component {
       })
   }
 
-
   render() {
     return (
       <div>
@@ -64,15 +62,3 @@ class ClanSearch extends Component {
 }
 
 export default withRouter(ClanSearch);
-
-
-// if (!clans) {
-//   localStorage.setItem('clans', JSON.stringify({ [name] : ID }))
-// }
-// else {
-//   let retreivedData = localStorage.getItem('clans')
-//   let clanArray = JSON.parse(retreivedData)
-//   clanArray[name] = ID
-//   localStorage.setItem('clans', JSON.stringify(clanArray))
-//   console.log(localStorage)
-// }

@@ -15,9 +15,6 @@ class PlayerComparison extends Component {
     return (playerTwoParsed)
   }
 
-
-
-
   state = {
     playerOne: this.playerOneInfo(),
     playerTwo: this.playerTwoInfo()

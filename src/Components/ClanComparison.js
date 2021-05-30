@@ -20,7 +20,6 @@ class ClanComparison extends Component {
     clanTwo: this.ClanTwoInfo()
   }
 
-
   render() {
     const clanOne = this.state.clanOne
     const clanTwo = this.state.clanTwo
